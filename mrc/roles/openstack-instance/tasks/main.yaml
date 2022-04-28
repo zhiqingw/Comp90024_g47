@@ -46,3 +46,4 @@
   template:
     src: my-hosts.j2
     dest: "{{_inventory}}"
+

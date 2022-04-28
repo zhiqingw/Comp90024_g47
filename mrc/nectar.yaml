@@ -9,4 +9,11 @@
     - role: openstack-volume
     - role: openstack-security-group
     - role: openstack-instance
-    - role: openstack-volume-snapshot
+    - role: instance-allocation
+    #- role: openstack-volume-snapshot
+
+- hosts: database
+  roles:
+    - role: openstack-common
+
+

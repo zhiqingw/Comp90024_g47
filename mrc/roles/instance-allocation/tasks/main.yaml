@@ -1,0 +1,11 @@
+---
+# Create volume snapshot(s) (for demo only, you don't need this unless you want to)
+- name: instance allocation
+  shell: |
+    cd ./inventory
+    python assign_host.py
+  
+
+- name: Read ini file with allow_no_value
+  debug:
+    msg: "{{ lookup('ini', file='{{_inventory}}', section='database', allow_no_value=True) }}"
