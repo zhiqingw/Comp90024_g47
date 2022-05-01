@@ -1,0 +1,74 @@
+---
+#
+#- name: send docker setup to database server
+#  copy:
+#    src: docker-compose.yml
+#    dest: /home/ubuntu
+#
+#- name: send couchdb setup to database server
+#  copy:
+#    src: run.sh
+#    dest: /home/ubuntu
+#
+#- name: setup couchdb
+#  command: sh run.sh
+#
+#
+- name: docker start
+  command: systemctl start docker.service
+
+- name: start a container with a couchdb
+  become: yes
+  docker_container:
+    name: "couchdb_"
+    image: "ibmcom/couchdb3:3.2.1"
+    ports:
+      - "5984:5984"
+      - "5986:5986"
+      - "4369:4369"
+      - "9100-9200:9100-9200"
+    volumes:
+      - ./data/master/data:/opt/couchdb/data
+    env:
+      COUCHDB_USER: admin
+      COUCHDB_PASSWORD: admin
+      NODENAME: 172.20.0.2
+
+- name: start a container with a couchdb
+  become: yes
+  docker_container:
+    name: "couch_slave1"
+    image: "ibmcom/couchdb3:3.2.1"
+    ports:
+      - "15984:5984"
+    volumes:
+      - ./data/slave1/data:/opt/couchdb/data
+    env:
+      COUCHDB_USER: admin
+      COUCHDB_PASSWORD: admin
+      NODENAME: 172.20.0.3
+
+- name: start a container with a couchdb
+  become: yes
+  docker_container:
+    name: "couch_slave2"
+    image: "ibmcom/couchdb3:3.2.1"
+    ports:
+      - "25984:5984"
+    volumes:
+      - ./data/slave2/data:/opt/couchdb/data
+    env:
+      COUCHDB_USER: admin
+      COUCHDB_PASSWORD: admin
+      NODENAME: 172.20.0.4
+
+
+
+- name: setup couchdb
+  shell:  |
+    curl -X POST "http://{{user}}:{{pass}}@127.0.0.1:{{item}}/_cluster_setup" -H 'Content-Type: application/json' \
+    -d "{\"action\": \"enable_cluster\", \"bind_address\":\"0.0.0.0\", \"username\": \"{{user}}\", \"password\":\"{{pass}}\", \"node_count\":\"{{size}}\"}"
+  loop: "{{ports}}"
+    
+
+

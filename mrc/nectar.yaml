@@ -4,7 +4,7 @@
   gather_facts: true
 
   roles:
-    - role: openstack-common
+    #- role: openstack-common
     - role: openstack-images
     - role: openstack-volume
     - role: openstack-security-group
@@ -12,8 +12,18 @@
     - role: instance-allocation
     #- role: openstack-volume-snapshot
 
-- hosts: database
+- hosts: 172.26.132.130
+  gather_facts: false
+  become: true
+  vars_files:
+    - host_vars/nectar.yaml
+  vars:
+    - ansible_user: ubuntu
+    - ansible_ssh_private_key_file: ~/.ssh/xuxux.pem
+    - ansible_ssh_common_args: '-o StrictHostKeyChecking=no'
   roles:
     - role: openstack-common
+    - role: docker
+    - role: depoly-couchdb
 
 
