@@ -11,13 +11,13 @@
 
 - name: Update pip
   ansible.builtin.pip:
-    name: ['pip', 'openstacksdk']
+    name: ['pip']
     state: latest
 # pip install --upgrade pip && pip install openstacksdk
 
 
 - name: install packages
   pip:
-    name: ['tweepy','couchdb']
+    name: ['tweepy','couchdb','docker']
     state: latest
 
