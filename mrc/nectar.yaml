@@ -1,18 +1,21 @@
+#- hosts: localhost
+#  vars_files:
+#    - host_vars/nectar.yaml
+#  gather_facts: true
+#
+#  roles:
+#    #- role: openstack-common
+#    - role: openstack-images
+#    - role: openstack-volume
+#    - role: openstack-security-group
+#    - role: openstack-instance
+#    - role: instance-allocation
+#    #- role: openstack-volume-snapshot
 - hosts: localhost
-  vars_files:
-    - host_vars/nectar.yaml
-  gather_facts: true
-
   roles:
-    #- role: openstack-common
-    - role: openstack-images
-    - role: openstack-volume
-    - role: openstack-security-group
-    - role: openstack-instance
-    - role: instance-allocation
-    #- role: openstack-volume-snapshot
+    - role: add-host
 
-- hosts: 172.26.132.130
+- hosts: 172.26.133.198
   gather_facts: false
   become: true
   vars_files:
@@ -23,7 +26,6 @@
     - ansible_ssh_common_args: '-o StrictHostKeyChecking=no'
   roles:
     - role: openstack-common
-    - role: docker
     - role: depoly-couchdb
 
 
