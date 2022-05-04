@@ -1,0 +1,138 @@
+sector, hospital_name, phone_number, website, state, long, postcode, bed_cat, id, beds, suburb, description, ogc_fid, street_address, lat
+"Private","The Geelong Clinic","03 5248 1155","www.thegeelongclinic.com.au","Vic",144.393267,3219,1,927,"<50","St Albans Park",null,5,"98 Townsend Road",-38.182406
+"Private","Albert Road Clinic","03 9256 8311","www.albertroadclinic.com.au/","Vic",144.972151,3004,2,8,"50-99","Melbourne",null,13,"31 Albert Road",-37.834246
+"Public","Alexandra District Hospital","03 5772 0900",null,"Vic",145.716143,3714,1,12,"<50","Alexandra","Small regional hospital with emergency services",17,"20 Cooper Street",-37.195065
+"Public","Angliss Hospital","03 9764 6111","www.easternhealth.org.au","Vic",145.314166,3156,3,22,"100-199","Upper Ferntree Gully","Large metropolitan hospital with an emergency department",27,"Albert Street",-37.898663
+"Private","Chesterville Day Hospital","03 9585 3777","www.curagroup.com.au","Vic",145.0568,3192,1,187,"<50","Cheltenham",null,35,"28 Chesterville Road",-37.96046
+"Public","Austin Hospital [Heidelberg]","03 9496 5000","www.austin.org.au","Vic",145.060236,3084,5,34,">500","Heidelberg","Major metropolitan hospital with an emergency department",40,"145 Studley Road",-37.756355
+"Private","Avenue Plastic Surgery","03 9521 1777","www.avenueplasticsurgery.com","Vic",144.998213,3181,1,35,"<50","Windsor",null,41,"20 The Avenue",-37.856118
+"Private","Beleura Private Hospital","03 5976 0888","www.beleuraprivate.com.au","Vic",145.049136,3931,3,69,"100-199","Mornington",null,75,"925 Nepean Highway",-38.225484
+"Private","Bellbird Private Hospital","03 9845 2333","www.bellbirdprivatehospital.com.au","Vic",145.156018,3130,1,70,"<50","Blackburn South",null,76,"198 Canterbury Road",-37.833073
+"Private","Berwick Eye and Surgicentre","03 9768 9210","www.berwickeye.com.au","Vic",145.346487,3806,1,78,"<50","Berwick",null,84,"22 Langmore Lane",-38.033667
+"Public","Box Hill Hospital","03 9895 3333","www.easternhealth.org.au","Vic",145.119094,3128,4,105,"200-500","Box Hill","Major metropolitan hospital with an emergency department",111,"51 Nelson Road",-37.813682
+"Public","Broadmeadows Health Service","03 8345 5000",null,"Vic",144.913106,3047,3,115,"100-199","Broadmeadows","Medium-sized metropolitan hospital",121,"35 Johnstone Street",-37.684321
+"Public","Bundoora Extended Care Centre","03 9495 3100",null,"Vic",145.055569,3083,2,122,"50-99","Bundoora","Specialist rehabilitation hospital",129,"1231 Plenty Road",-37.701124
+"Private","Cabrini Brighton","03 9508 8777","www.cabrini.com.au","Vic",144.991572,3186,3,130,"100-199","Brighton",null,138,"243 New Street",-37.91165
+"Private","Cabrini Health Elsternwick Rehabilitation - Glenhuntly Rd","03 9508 5200","www.cabrini.com.au","Vic",145.009328,3185,1,131,"<50","Elsternwick",null,139,"494 Glenhuntly Road",-37.88543
+"Private","Cabrini Health Elsternwick Rehabilitation - Hopetoun","03 9508 5100","www.cabrini.com.au","Vic",145.01039,3185,1,132,"<50","Elsternwick",null,140,"2-6 Hopetoun Street",-37.884778
+"Private","Cabrini Malvern","03 9508 1222","www.cabrini.com.au","Vic",145.0335,3144,5,133,">500","Malvern",null,141,"183 Wattletree Road",-37.861641
+"Private","Cabrini Prahran","03 95081000","www.cabrini.com.au","Vic",145.009017,3181,1,134,"<50","Prahran",null,142,"646 High Street",-37.854034
+"Public","Calvary Health Care Bethlehem","03 9596 2853","www.bethlehem.org.au/","Vic",145.013415,3162,2,141,"50-99","Caulfield","Metropolitan hospital",149,"476 Kooyong Road",-37.896962
+"Public","Careplans Assessment Victoria",null,null,"Vic",144.970625,3000,null,165,null,null,"Metropolitan hospital",174,null,-37.809419
+"Public","Caritas Christi Hospice [Kew]","03 9853 2344","www.cch.svhm.org.au","Vic",145.015557,3101,1,166,"<50","Kew","Metropolitan hospital",175,"104 Studley Park Road",-37.804706
+"Public","Casey Hospital","03 8768 1200",null,"Vic",145.347181,3806,4,168,"200-500","Berwick","Major metropolitan hospital with an emergency department",177,"52 Kangan Drive",-38.045325
+"Public","Caulfield Hospital","03 9076 6000","www.cgmc.org.au","Vic",145.016892,3162,4,174,"200-500","Caulfield","Medium-sized metropolitan hospital",183,"260-294 Kooyong Road",-37.882707
+"Private","Como Private Hospital","03 9586 3500","www.comoprivatehospital.com.au","Vic",145.072574,3194,2,208,"50-99","Parkdale",null,216,"152 Como Parade West",-37.990835
+"Private","Corymbia House","03 9791 3533","www.corymbiahouse.com.au/","Vic",145.21715,3175,1,224,"<50","Dandenong",null,229,"92 David Street",-37.977201
+"Private","Cotham Private Hospital","03 8803 0500","www.cothamprivate.com.au","Vic",145.048305,3101,2,225,"50-99","Kew",null,230,"Corner of Cotham Road and Adeny Avenue",-37.808694
+"Public","Craigieburn Health Service","03 8338 3000",null,"Vic",144.91928,3064,1,229,"<50","Craigieburn","Metropolitan hospital",234,"350 Craigieburn Road West",-37.596015
+"Public","Cranbourne Integrated Care Centre","03 5990 6789",null,"Vic",145.280832,3977,1,230,"<50","Cranbourne","Medium-sized metropolitan hospital",235,"140-154 Sladen Street",-38.113312
+"Public","Dame Phyllis Frost Centre - Marmak unit","03 8684 0000",null,"Vic",144.742309,3023,1,246,"<50","Deer Park","Specialist psychiatric hospital",252,"Riding-Boundary Road",-37.781307
+"Public","Dandenong Campus","03 9554 1000",null,"Vic",145.218529,3175,4,247,"200-500","Dandenong","Major metropolitan hospital with an emergency department",253,"105-135 David Street",-37.976459
+"Public","Dental Health Services Victoria","03 9341 1000","www.dhsv.org.au","Vic",144.964529,3053,1,259,"<50","Carlton","Specialist dental hospital",265,"720 Swanston Street",-37.799299
+"Public","Djerriwarrh Health Service [Bacchus Marsh]","03 5367 2000","www.meltonhealth.com.au/","Vic",144.433264,3340,1,265,"<50","Bacchus Marsh","Medium-sized regional hospital with emergency services",271,"29-35 Grant Street",-37.678267
+"Private","Donvale Rehabilitation Hospital","03 9841 1400","www.donvalerehabilitationhospital.com.au/","Vic",145.171655,3111,2,268,"50-99","Donvale",null,274,"1119 Doncaster Road",-37.789836
+"Private","Dorset Rehabilitation Centre","03 8371 9477","www.dorsetrehabilitationcentre.com.au","Vic",144.947436,3044,1,271,"<50","Pascoe Vale",null,276,"146 Derby Street",-37.723402
+"Private","Epworth Cliveden","03 9419 7122","www.epworth.org.au/Our-Hospitals/Pages/Epworth-Cliveden.aspx","Vic",144.987547,3002,1,295,"<50","East Melbourne",null,300,"29 Simpson Street",-37.815662
+"Private","Epworth Eastern","03 8807 7100","www.epworth.org.au/Our-Hospitals/Pages/Epworth-Eastern.aspx","Vic",145.119368,3128,4,296,"200-500","Box Hill",null,301,"1 Arnold Street",-37.814678
+"Private","Epworth Freemasons [Clarendon Street]","03 9483 3833","www.epworth.org.au/Our-Hospitals/Pages/Epworth-Freemasons.aspx","Vic",144.984107,3002,3,297,"100-199","East Melbourne",null,302,"166 Clarendon Street",-37.810694
+"Private","Epworth Freemasons [Victoria Parade]","03 9418 8188","www.epworth.org.au/Our-Hospitals/Pages/Epworth-Freemasons.aspx","Vic",144.98212,3002,2,298,"50-99","East Melbourne",null,303,"320 Victoria Parade",-37.809284
+"Private","Epworth Hawthorn","03 9415 5777","www.epworth.org.au","Vic",145.023405,3122,1,299,"<50","Hawthorn",null,304,"50 Burwood Road",-37.821229
+"Private","Epworth Rehabilitation Brighton","03 9591 9200","www.epworth.org.au/Our-Hospitals/Pages/Epworth-Rehabilitation-Brighton.aspx","Vic",145.002815,3186,2,300,"50-99","Brighton",null,305,"85 Wilson Street",-37.913689
+"Private","Epworth Rehabilitation Camberwell","03 9809 2444","www.epworth.org.au/Our-Hospitals/Pages/Epworth-Rehabilitation-Camberwell.aspx","Vic",145.054689,3124,2,301,"50-99","Camberwell",null,307,"888 Toorak Road",-37.846223
+"Private","Epworth Rehabilitation Richmond","03 9426 6666","www.epworth.org.au/Our-Hospitals/Pages/Epworth-Rehabilitation-Richmond.aspx","Vic",144.993503,3121,2,302,"50-99","Richmond",null,308,"89 Bridge Road",-37.817419
+"Private","Epworth Richmond","03 9426 6666","www.epworth.org.au/Our-Hospitals/Pages/Epworth-Richmond.aspx","Vic",144.993029,3121,4,303,"200-500","Richmond",null,309,"89 Bridge Road",-37.817433
+"Private","Frances Perry House","03 9344 5000","www.francesperryhouse.com.au","Vic",144.955135,3052,3,322,"100-199","Parkville",null,328,"Levels 6 and 7, Corner of Grattan Street and Flemington Road",-37.798758
+"Public","Frankston Hospital","03 9784 7777",null,"Vic",145.128428,3199,4,323,"200-500","Frankston","Major metropolitan hospital with an emergency department",329,"2 Hastings Road",-38.150791
+"Public","Geelong Hospital","03 5226 1600",null,"Vic",144.364964,3220,4,330,"200-500","Geelong","Major metropolitan hospital with an emergency department",336,"Bellerine Street",-38.151533
+"Private","Geelong Private Hospital","03 5226 1600","www.geelongprivatehospital.com.au","Vic",144.364085,3220,2,331,"50-99","Geelong",null,337,"Corner of Bellerine and Ryrie Streets",-38.150951
+"Public","Gippsland Southern Health Service - Korumburra","03 5654 2777",null,"Vic",145.828249,3950,1,338,"<50","Korumburra","Small regional hospital with emergency services",344,"69-75 Bridge Street",-38.430328
+"Private","Glen Eira Day Surgery","03 9595 6600","www.caulfieldendoscopy.com.au","Vic",145.019265,3162,1,341,"<50","Caulfield South",null,347,"544 Hawthorn Road",-37.900377
+"Private","Glenferrie Private Hospital","03 9009 3800",null,"Vic",145.031544,3122,1,344,"<50","Hawthorn",null,350,"29 Hilda Crescent",-37.819459
+"Public","Golf Links Road Rehabilitation Centre","03 9783 7277","www.peninsulahealth.org.au/locations/golf-links-road-rehabilitation-centre/","Vic",145.149769,3199,2,351,"50-99","Frankston","Metropolitan hospital",358,"125 Golf Links Road",-38.173447
+"Public","Healesville and District Hospital","03 5962 4300",null,"Vic",145.529032,3777,1,387,"<50","Healesville","Regional hospital",393,"377 Maroondah Highway",-37.646879
+"Private","Healthscope Independence Services","03 8551 8888","http://healthscopeindependenceservices.com.au","Vic",145.081172,3189,null,388,null,"Moorabbin",null,394,"13 Corporate Drive",-37.947818
+"Public","Heidelberg Repatriation Hospital [Heidelberg West]","03 9496 5000","www.austin.org.au","Vic",145.04749,3081,3,392,"100-199","Heidelberg West","Medium-sized metropolitan hospital",398,"300 Waterdale Road",-37.755973
+"Private","Hobsons Bay Endoscopy Centre Altona","03 9398 8800","hobsonsbayendoscopy.com.au","Vic",144.828494,3018,null,402,null,"Altona",null,408,"Corner of Queen and Sargood Streets",-37.869448
+"Private","Hobsons Bay Endoscopy Centre Sydenham","03 8361 6400","hobsonsbayendoscopy.com.au","Vic",144.758677,3037,null,403,null,"Sydenham",null,409,"566 Melton Highway",-37.693365
+"Private","Hobsons Bay Endoscopy Centre Werribee","03 9731 8000","hobsonsbayendoscopy.com.au","Vic",144.686494,3030,null,404,null,"Werribee",null,410,"179 Princes Highway",-37.890649
+"Private","John Fawkner Private Hospital","03 9385 2500","www.johnfawknerprivatehospital.com.au","Vic",144.958398,3058,3,433,"100-199","Coburg",null,439,"275 Moreland Road",-37.754369
+"Private","Jolimont Endoscopy","03 9654 8033","www.jolimont.com.au","Vic",144.978596,3002,1,436,"<50","East Melbourne",null,442,"19/201 Wellington Parade Sth",-37.816762
+"Public","Kingston Centre [Cheltenham]","03 9265 1000","www.southernhealth.org.au/page/Hospitals/Kingston_Centre/","Vic",145.078969,3192,3,468,"100-199","Cheltenham","Specialist rehabilitation hospital",474,"400 Warrigal Road",-37.955018
+"Private","Knox Private Hospital","03 9210 7000","www.knoxprivatehospital.com.au","Vic",145.228035,3152,4,471,"200-500","Wantirna",null,477,"262 Mountain Highway",-37.849645
+"Public","Kooweerup Regional Health Service","03 5997 9679","www.kooweeruphospital.net.au","Vic",145.484433,3981,1,474,"<50","Koo Wee Rup","Regional hospital",480,"215 Rossiter Road",-38.200653
+"Public","Kyneton District Health Service","03 5422 9900","www.kynetonhealth.org.au","Vic",144.469742,3444,1,481,"<50","Kyneton","Small regional hospital with emergency services",487,"7-25 Caroline Chisholm Drive",-37.254431
+"Private","Linacre Private Hospital","03 9598 9666","www.linacreprivate.com.au","Vic",145.003259,3188,2,499,"50-99","Hampton",null,505,"12 Linacre Road",-37.942699
+"Private","Manningham Day Procedure Centre","03 8850 0590","www.mdpc.com.au","Vic",145.115662,3107,null,531,null,"Templestowe Lower",null,537,"Suite 304, Level 3 Manningham Medical Centre 200 High Street",-37.773471
+"Public","Maroondah Hospital [East Ringwood]","03 9871 3333","www.easternhealth.org.au","Vic",145.254535,3135,4,538,"200-500","Ringwood East","Major metropolitan hospital with an emergency department",545,"1-15 Mt Dandenong Road",-37.806884
+"Private","Masada Private Hospital","03 9038 1300","www.masadaprivate.com.au","Vic",145.003096,3183,2,544,"50-99","St Kilda",null,551,"26 Balaclava Road",-37.869799
+"Private","Melbourne MediBrain & MediSleep Centre","03 9504 8400","www.medibrain.com.au","Vic",145.018774,3161,1,565,"<50","Caulfield North",null,572,"631 Inkerman Road",-37.869064
+"Private","Melbourne Oral & Facial Surgery","03 9654 4844","www.mofs.com.au","Vic",144.971391,3000,1,566,"<50","Melbourne",null,573,"Level 12, 63 Exhibition Street",-37.814488
+"Private","Melbourne Private Hospital","03 8341 3400","www.melbourneprivatehospital.com.au","Vic",144.957025,3052,3,567,"100-199","Parkville",null,574,"Royal Parade",-37.798272
+"Public","Melton Health","03 9747 7600",null,"Vic",144.558284,3337,1,568,"<50","Melton West","Metropolitan hospital",575,"195-209 Barries Road",-37.686449
+"Public","Mercy Health - O''Connell Family Centre","03 8416 7600","www.mercy.com.au/Hospital_Clinical_And_Mental_Health_Services/OConnell_Family_Centre/O_Connell_Family_Centre/","Vic",145.061729,3126,1,573,"<50","Canterbury","Early parenting centre",580,"6 Mont Albert Road",-37.816688
+"Public","Mercy Hospital for Women","03 8458 4444","www.mercy.com.au/Hospital_Clinical_And_Mental_Health_Services/Our_Hospitals_And_Clinics/Heidelberg_-_Mercy_Hospital_for_Women/","Vic",145.061008,3084,3,574,"100-199","Heidelberg","Specialist women''s hospital with an emergency department",581,"163 Studley Road",-37.756075
+"Private","Mitcham Private Hospital","03 9210 3222","www.mitchamprivate.com.au","Vic",145.194808,3132,3,589,"100-199","Mitcham",null,596,"27 Doncaster East Road",-37.810436
+"Public","Monash Medical Centre [Clayton]","03 9594 6666","www.southernhealth.org.au/page/Hospitals/Monash_Medical_Centre/","Vic",145.123128,3168,5,595,">500","Clayton","Major metropolitan hospital with an emergency department",603,"246 Clayton Road",-37.921176
+"Public","Monash Medical Centre [Moorabbin]","03 9928 8111",null,"Vic",145.063197,3165,3,596,"100-199","East Bentleigh","Large metropolitan hospital",604,"823-865 Centre Road",-37.920697
+"Public","Mount Eliza Aged Care & Rehabilitation Service","03 9788 1200",null,"Vic",145.087358,3930,1,614,"<50","Mount Eliza","Metropolitan hospital",622,"33 Jacksons Road",-38.168269
+"Private","North Eastern Rehabilitation Centre","03 9474 8900","www.northeasternrehabilitationcentre.com.au","Vic",145.031344,3079,1,668,"<50","Ivanhoe",null,675,"134-144 Ford Street",-37.763424
+"Private","Northpark Private Hospital","03 9467 6022","www.northparkprivatehospital.com.au","Vic",145.061631,3083,3,679,"100-199","Bundoora",null,687,"Corner of Plenty and Greenhills Roads",-37.691208
+"Public","Orygen Inpatient Unit","03 8345 7550","www.oyh.org.au","Vic",144.886617,3011,1,699,"<50","Footscray","Specialist psychiatric hospital",706,"35 Mavis Street",-37.791926
+"Private","Peninsula Private Hospital Victoria","03 9788 3466","www.peninsulaph.com.au/","Vic",145.169552,3199,3,714,"100-199","Frankston",null,720,"525 McClelland Drive",-38.157557
+"Public","Peter MacCallum Cancer Institute","03 9656 1111","www.petermac.org","Vic",144.977372,3002,3,719,"100-199","East Melbourne","Specialist cancer hospital",726,"2 St Andrews Place",-37.811589
+"Public","Queen Elizabeth Centre [Noble Park]","03 9549 2777","www.qec.org.au","Vic",145.178285,3174,1,746,"<50","Noble Park","Early parenting centre",752,"53 Thomas Street",-37.972053
+"Private","Ringwood Private Hospital","03 8804 4000","www.ringwoodprivatehospital.com.au","Vic",145.243629,3135,2,761,"50-99","Ringwood",null,767,"36 Mt Dandenong Road",-37.811523
+"Public","Rosebud Hospital","03 5986 0666",null,"Vic",144.884899,3939,2,774,"50-99","Rosebud","Medium-sized metropolitan hospital with an emergency department",778,"1527 Point Nepean Road",-38.362168
+"Public","Rosebud Rehabilitation Unit","03 5986 3344",null,"Vic",144.89722,3939,null,775,null,"Rosebud","Specialist rehabilitation hospital",779,"1527 Point Nepean Road",-38.366789
+"Private","Rosebud SurgiCentre","03 5986 0500","www.rosebudsurgicentre.com","Vic",144.883554,3940,null,776,null,"Rosebud West",null,780,"1537 Point Nepean Road",-38.361748
+"Public","Royal Children''s Hospital [Parkville]","03 9345 5522","www.rch.org.au/rch","Vic",144.950859,3052,4,781,"200-500","Parkville","Specialist children''s hospital with an emergency department",785,"50 Flemington Road",-37.794997
+"Public","Royal Children''s Hospital [Travancore Psych]","03 9345 6011",null,"Vic",144.935236,3031,null,782,null,"Flemington","Specialist psychiatric hospital",786,"50 Flemington Street",-37.782172
+"Public","Royal Melbourne Hospital [Parkville]","03 9342 7000","www.mh.org.au","Vic",144.956864,3050,5,786,">500","Parkville","Major metropolitan hospital with an emergency department",790,"300 Grattan Street",-37.799259
+"Public","Royal Melbourne Hospital- Royal Park Campus","03 8387 2000","www.mh.org.au","Vic",144.948049,3052,3,787,"100-199","Parkville","Specialist rehabilitation hospital",791,"34-54 Poplar Road",-37.778813
+"Public","Royal Talbot Rehabilitation Centre [Kew]","03 9490 7500",null,"Vic",145.023715,3101,2,794,"50-99","Kew","Specialist rehabilitation hospital",798,"1 Yarra Boulevard",-37.789522
+"Public","Royal Women''s Hospital [Parkville]","03 8345 2000","www.thewomens.org.au","Vic",144.954825,3052,3,795,"100-199","Parkville","Specialist women''s hospital with an emergency department",799,"20 Flemington Road",-37.798772
+"Public","Sandringham Hospital","03 9076 1000","www.sdmh.org.au","Vic",145.018157,3191,2,803,"50-99","Sandringham","Large metropolitan hospital with an emergency department",807,"193 Bluff Road",-37.961049
+"Private","South Eastern Private","03 9549 6655","www.southeasternprivate.com.au","Vic",145.191922,3174,3,821,"100-199","Noble Park",null,824,"Corner of Princes Highway and Heatherton Road",-37.966243
+"Public","St George''s Health Service- Aged Care","03 9816 0444",null,"Vic",145.052585,3101,3,844,"100-199","Kew","Metropolitan hospital",846,"283 Cotham Road",-37.809085
+"Private","St John of God Berwick Hospital","03 9707 1900","www.sjog.org.au/berwick","Vic",145.344974,3806,2,849,"50-99","Berwick",null,851,"3 Gibb Street",-38.034499
+"Private","St John of God Frankston Rehabilitation Hospital","03 9788 3333","www.sjog.org.au/frankston","Vic",145.155926,3199,2,852,"50-99","Frankston",null,854,"255-265 Cranbourne Road",-38.153035
+"Private","St John of God Geelong Hospital","03 5226 8888","www.sjog.org.au/geelong","Vic",144.357679,3220,3,853,"100-199","Geelong",null,855,"80 Myers Street",-38.151567
+"Private","St John of God Pinelodge Clinic","03 8793 9444","www.sjog.org.au/pinelodge","Vic",145.213143,3175,2,857,"50-99","Dandenong",null,858,"1480 Heatherton Road",-37.970226
+"Public","St Vincent''s Hospital [Fitzroy]","03 9288 2211",null,"Vic",144.975231,3065,5,869,">500","Fitzroy","Major metropolitan hospital with an emergency department",870,"41 Victoria Parade",-37.806545
+"Private","St Vincent''s Private Hospital East Melbourne","03 9928 6555","www.stvincentsmercy.com.au","Vic",144.984164,3002,3,872,"100-199","East Melbourne",null,873,"159 Grey Street",-37.811733
+"Private","St Vincent''s Private Hospital Fitzroy","03 9411 7111","www.stvincentsmercy.com.au","Vic",144.976029,3065,4,873,"200-500","Fitzroy",null,874,"59-61 Victoria Parade",-37.807993
+"Private","St Vincent''s Private Hospital Kew","03 9851 8888","www.stvincentsmercy.com.au","Vic",145.023694,3101,1,874,"<50","Kew",null,875,"5 Studley Avenue",-37.806567
+"Public","Sunbury Day Hospital","03 9732 8600",null,"Vic",144.732674,3429,1,886,"<50","Sunbury","Metropolitan hospital",887,"7 Macedon Street",-37.576998
+"Public","Sunshine Hospital","03 8345 1333",null,"Vic",144.816477,3021,4,890,"200-500","St Albans","Major metropolitan hospital with an emergency department",891,"176 Furlong Road",-37.759179
+"Public","Sydney Road Clinic","03 9386 5627",null,"Vic",144.96356,3056,null,902,null,"Brunswick","Metropolitan hospital",903,"732 Sydney Road",-37.76018
+"Public","The Alfred","03 9076 2000","www.alfred.org.au","Vic",144.981937,3181,5,919,">500","Prahran","Major metropolitan hospital with an emergency department",920,"55 Commercial Road",-37.846087
+"Private","The Avenue Hospital","03 9529 7377","www.theavenuehospital.com.au/","Vic",144.998513,3181,3,920,"100-199","Windsor",null,921,"40 The Avenue",-37.854809
+"Private","The Bays Hospital","03 5975 2009","www.thebays.com.au","Vic",145.040939,3931,3,921,"100-199","Mornington",null,922,"Vale Street",-38.223524
+"Public","The Kilmore & District Hospital","03 5734 2000",null,"Vic",144.957915,3764,1,931,"<50","Kilmore","Small regional hospital with emergency services",931,"Rutledge Street",-37.301794
+"Public","The McKellar Centre","03 5279 2222",null,"Vic",144.335728,3215,3,932,"100-199","North Geelong","Specialist rehabilitation hospital",932,"45-95 Ballarat Road",-38.118795
+"Private","The Melbourne Clinic","03 9429 4688","www.themelbourneclinic.com.au","Vic",144.998739,3121,3,933,"100-199","Richmond",null,933,"130 Church Street",-37.814361
+"Public","The Mornington Centre","03 5976 2733",null,"Vic",145.041697,3931,2,935,"50-99","Mornington","Specialist rehabilitation hospital",935,"Corner of Tyalla Grove and Separation Street",-38.230174
+"Public","The Northern Hospital [Epping]","03 8405 8000","www.nh.org.au","Vic",145.014381,3076,4,936,"200-500","Epping","Major metropolitan hospital with an emergency department",936,"185 Cooper Street",-37.653417
+"Public","The Peter James Centre [East Burwood]","03 9881 1888","www.easternhealth.org.au","Vic",145.164542,3131,3,938,"100-199","Forest Hill","Medium-sized metropolitan hospital",938,"321-345 Burwood Highway",-37.852712
+"Public","The Royal Victorian Eye & Ear Hospital","03 9929 8666","www.rveeh.vic.gov.au","Vic",144.976245,3002,2,941,"50-99","East Melbourne","Specialist eye and ear hospital with an emergency department",941,"32 Gisborne Street",-37.808978
+"Private","The Valley Private Hospital","03 9790 9333","www.thevalleyprivate.com.au","Vic",145.213122,3170,3,949,"100-199","Mulgrave",null,949,"Corner of Police and Gladstone Roads",-37.938409
+"Private","The Victoria Clinic","03 9526 0200","www.thevictoriaclinic.com.au","Vic",144.997225,3181,1,950,"<50","Prahran",null,950,"324 Malvern Road",-37.847714
+"Private","The Victorian Rehabilitation Centre","03 9566 2777","www.thevictorianrehabilitationcentre.com.au","Vic",145.161425,3150,3,951,"100-199","Glen Waverley",null,951,"499 Springvale Road",-37.898227
+"Public","Yarra Ranges Health","03 9091 8888","www.iechs.com.au","Vic",145.351204,3140,1,1068,"<50","Lilydale","Metropolitan hospital",1068,"25 Market Street",-37.756319
+"Public","Tweddle Child & Family Health Centre [Footscray]","03 9689 1577",null,"Vic",144.887421,3011,1,978,"<50","Footscray","Early parenting centre",978,"53 Adelaide Street",-37.797407
+"Private","Victoria Parade Surgery Centre","03 9650 4000","www.vpsc.com.au","Vic",144.97476,3002,1,985,"<50","East Melboune",null,985,"Level 1, 100 Victoria Parade",-37.808521
+"Public","Victorian Institute of Forensic Mental Health","03 8684 0000",null,"Vic",145.012975,3078,3,986,"100-199","Fairfield","Specialist psychiatric hospital",986,"Yarra Bend Road",-37.78931
+"Public","Victorian Institute of Forensic Mental Health Prison Health Service","03 8684 0000",null,"Vic",144.950757,3001,1,987,"<50","Melbourne","Specialist psychiatric hospital",987,"317 Spencer Street",-37.812763
+"Private","Vision Day Surgery Camberwell","03 9882 1347","www.visioneyeinstitute.com.au","Vic",145.0556,3123,null,988,null,"Camberwell",null,988,"27 Denmark Hill Road",-37.83252
+"Private","Vision Day Surgery Eastern","03 9880 4333","www.visioneyeinstitute.com.au","Vic",145.119433,3128,null,990,null,"Box Hill",null,990,"852 Whitehorse Road",-37.817591
+"Private","Vision Day Surgery Footscray","03 9689 9233","www.visioneyeinstitute.com.au","Vic",144.895155,3011,null,991,null,"Footscray",null,991,"89 Paisley Street",-37.800508
+"Private","Vision Eye Institute","03 9521 2175","www.visioneyeinstitute.com.au","Vic",144.980304,3004,null,994,null,"Melbourne",null,994,"600 St Kilda Road",-37.850605
+"Public","Wantirna Health","03 9955 1200",null,"Vic",145.225902,3152,2,1006,"50-99","Wantirna","Metropolitan hospital",1006,"251 Mountain Highway",-37.848525
+"Private","Warringal Private Hospital","03 9274 1300","www.warringalprivate.com.au/","Vic",145.060728,3084,3,1013,"100-199","Heidelberg",null,1013,"216 Burgundy Street",-37.754419
+"Private","Waverley Private Hospital","03 9881 7700","www.waverleyprivate.com.au/","Vic",145.145798,3149,3,1016,"100-199","Mount Waverley",null,1016,"343-357 Blackburn Road",-37.884632
+"Public","Werribee Mercy Hospital","03 8754 3000","www.mercy.com.au/Hospital_Clinical_And_Mental_Health_Services/Our_Hospitals_And_Clinics/Werribee_Mercy_Hospital/","Vic",144.698621,3030,3,1022,"100-199","Werribee","Large metropolitan hospital with an emergency department",1022,"300 Princes Highway",-37.886587
+"Public","Western Hospital [Footscray]","03 8345 6666","www.wh.org.au","Vic",144.887191,3011,4,1035,"200-500","Footscray","Major metropolitan hospital with an emergency department",1035,"160 Gordon Street",-37.792298
+"Private","Western Private Hospital","03 9318 3177","www.westernprivatehospital.com.au","Vic",144.885932,3011,1,1036,"<50","Footscray",null,1036,"1-9 Marion Sreet",-37.793045
+"Public","Williamstown Hospital","03 9393 0100",null,"Vic",144.892339,3016,2,1044,"50-99","Williamstown","Medium-sized metropolitan hospital with an emergency department",1044,"77B Railway Crescent",-37.863576
+"Public","Yea & District Memorial Hospital","03 5736 0400",null,"Vic",145.430724,3717,1,1072,"<50","Yea","Small regional hospital with emergency services",1072,"45 Station Street",-37.213634
