@@ -11,5 +11,5 @@ if __name__ == "__main__":
         ipv4s.append(i)
     for i in range(len(ipv4s)):
         config.add_section(servers[i])
-        config.set(servers[i], ipv4s[i])
+        config.set(servers[i],servers[i],ipv4s[i])
     config.write(open("_inventory.ini", "w"))

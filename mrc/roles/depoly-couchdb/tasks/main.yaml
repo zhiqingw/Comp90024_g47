@@ -1,0 +1,98 @@
+---
+#
+#- name: send docker setup to database server
+#  copy:
+#    src: docker-compose.yml
+#    dest: /home/ubuntu
+#
+#- name: send couchdb setup to database server
+#  copy:
+#    src: run.sh
+#    dest: /home/ubuntu
+#
+#- name: setup couchdb
+#  command: sh run.sh
+#
+#
+- name: set master_node variable
+  set_fact:
+    master_node: "{{ lookup('ini', 'database',section='database', file='./inventory/_inventory.ini',allow_no_value=True) }}"
+    port: 5984
+
+- name: network
+  become: yes
+  community.docker.docker_network:
+    name: couchdb_nw
+    driver: bridge
+    ipam_config:
+      - subnet: 172.20.0.0/16
+        gateway: 172.20.0.1
+
+- name: start a container with a couchdb
+  become: yes
+  docker_container:
+    name: "couchdb_"
+    image: couchdb:latest
+    ports:
+      - "{{master_node}}:5984:5984"
+      - "{{master_node}}:5986:5986"
+      - "{{master_node}}:4369:4369"
+    volumes:
+      - ./data/master/data:/opt/couchdb/data
+    env:
+      COUCHDB_USER: "admin"
+      COUCHDB_PASSWORD: "admin"
+      NODENAME: "172.20.0.2"
+      COUCHDB_SECRET: "{{cookie}}"
+    networks:
+      - name: couchdb_nw
+        ipv4_address: 172.20.0.2
+
+- name: start a container with a couchdb
+  become: yes
+  docker_container:
+    name: "couch_slave1"
+    image: couchdb:latest
+#    ports:
+#      - "15984:5984"
+    volumes:
+      - ./data/slave1/data:/opt/couchdb/data
+    env:
+      COUCHDB_USER: admin
+      COUCHDB_PASSWORD: admin
+      NODENAME: 172.20.0.3
+      COUCHDB_SECRET: "{{cookie}}"
+    networks:
+      - name: couchdb_nw
+        ipv4_address: 172.20.0.3
+
+- name: start a container with a couchdb
+  become: yes
+  docker_container:
+    name: "couch_slave2"
+    image: couchdb:latest
+#    ports:
+#      - "25984:5984"
+    volumes:
+      - ./data/slave2/data:/opt/couchdb/data
+    env:
+      COUCHDB_USER: admin
+      COUCHDB_PASSWORD: admin
+      NODENAME: 172.20.0.4
+      COUCHDB_SECRET: "{{cookie}}"
+    networks:
+      - name: couchdb_nw
+        ipv4_address: 172.20.0.4
+
+- name: setup couchdb
+  shell:  |
+    curl -X POST -H "Content-Type: application/json" http://admin:admin@{{master_node}}:{{port}}/_cluster_setup -d '{"action": "enable_cluster", "bind_address":"0.0.0.0", "username": "{{user}}", "password":"{{pass}}", "port": {{port}}, "node_count": "3", "remote_node": "{{item}}", "remote_current_user": "admin", "remote_current_password": "{{pass}}" }'
+    curl -X POST -H "Content-Type: application/json" http://admin:admin@{{master_node}}:{{port}}/_cluster_setup -d '{"action": "add_node", "host":"{{item}}", "port": {{port}}, "username": "{{user}}", "password":"{{pass}}"}'
+  loop: "{{other_nodes}}"
+
+- name: finsh couchdb setup
+  shell:  |
+    curl -XPOST "http://${user}:${pass}@{{master_node}}:{{port}}/_cluster_setup" --header "Content-Type: application/json" --data "{\"action\": \"finish_cluster\"}"
+
+
+

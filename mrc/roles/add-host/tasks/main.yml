@@ -1,4 +1,7 @@
 - name: Add host
   ansible.builtin.add_host:
-    name: '172.26.133.198'
+    name: '172.26.134.66'
     groups: COMP90024
+
+
+

@@ -5,7 +5,29 @@
     cd ./inventory
     python3 assign_host.py
 
+- name: set host variable
+  set_fact:
+    database: "{{ lookup('ini', 'database',section='database', file='./inventory/_inventory.ini',allow_no_value=True) }}"
+    crawler: "{{ lookup('ini', 'crawler',section='crawler', file='./inventory/_inventory.ini',allow_no_value=True) }}"
+    backend: "{{ lookup('ini', 'backend',section='backend', file='./inventory/_inventory.ini',allow_no_value=True) }}"
+    frontend: "{{ lookup('ini', 'frontend',section='frontend', file='./inventory/_inventory.ini',allow_no_value=True) }}"
 
-- name: Read ini file with allow_no_value
-  debug:
-    msg: "{{ lookup('ini', file='./inventory/_inventory.ini', section='COMP90024', allow_no_value=True) }}"
+- name: Add databse host
+  ansible.builtin.add_host:
+    name: "{{database}}"
+    groups: database
+
+- name: Add crawler host
+  ansible.builtin.add_host:
+    name: "{{crawler}}"
+    groups: crawler
+
+- name: Add backend host
+  ansible.builtin.add_host:
+    name: "{{backend}}"
+    groups: backend
+
+- name: Add frontend host
+  ansible.builtin.add_host:
+    name: "{{frontend}}"
+    groups: frontend
