@@ -16,8 +16,7 @@
 #
 - name: set master_node variable
   set_fact:
-    master_node: "{{ lookup('ini', 'database',section='database', file='./inventory/_inventory.ini',allow_no_value=True) }}"
-    port: 5984
+    master_host: "http://{{user}}:{{pass}}@{{master_node}}:{{port}}"
 
 - name: network
   become: yes
@@ -86,13 +85,22 @@
 
 - name: setup couchdb
   shell:  |
-    curl -X POST -H "Content-Type: application/json" http://admin:admin@{{master_node}}:{{port}}/_cluster_setup -d '{"action": "enable_cluster", "bind_address":"0.0.0.0", "username": "{{user}}", "password":"{{pass}}", "port": {{port}}, "node_count": "3", "remote_node": "{{item}}", "remote_current_user": "admin", "remote_current_password": "{{pass}}" }'
-    curl -X POST -H "Content-Type: application/json" http://admin:admin@{{master_node}}:{{port}}/_cluster_setup -d '{"action": "add_node", "host":"{{item}}", "port": {{port}}, "username": "{{user}}", "password":"{{pass}}"}'
+    curl -X POST -H "Content-Type: application/json" {{master_host}}/_cluster_setup -d '{"action": "enable_cluster", "bind_address":"0.0.0.0", "username": "{{user}}", "password":"{{pass}}", "port": {{port}}, "node_count": "3", "remote_node": "{{item}}", "remote_current_user": "admin", "remote_current_password": "{{pass}}" }'
+    curl -X POST -H "Content-Type: application/json" {{master_host}}/_cluster_setup -d '{"action": "add_node", "host":"{{item}}", "port": {{port}}, "username": "{{user}}", "password":"{{pass}}"}'
   loop: "{{other_nodes}}"
+
+- name: enable couchdb CORS
+  shell:  |
+    curl -X PUT {{master_host}}/_config/httpd/enable_cors -d '"true"'
+    curl -X PUT {{master_host}}/_config/cors/origins -d '"*"'
+    curl -X PUT {{master_host}}/_config/cors/credentials -d '"true"'
+    curl -X PUT {{master_host}}/_config/cors/methods -d '"GET, PUT, POST, HEAD, DELETE"'
+    curl -X PUT {{master_host}}/_config/cors/headers -d '"accept, authorization, content-type, origin, referer, x-csrf-token"'
+
 
 - name: finsh couchdb setup
   shell:  |
-    curl -XPOST "http://${user}:${pass}@{{master_node}}:{{port}}/_cluster_setup" --header "Content-Type: application/json" --data "{\"action\": \"finish_cluster\"}"
+    curl -XPOST "{{master_host}}/_cluster_setup" --header "Content-Type: application/json" --data "{\"action\": \"finish_cluster\"}"
 
 
 

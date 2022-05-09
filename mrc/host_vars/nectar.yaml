@@ -10,6 +10,8 @@ pass: admin
 nodes: ["172.20.0.2","172.20.0.3","172.20.0.4"]
 size: 3
 ports: ["5984","15984","25984"]
+master_node: "{{ lookup('ini', 'database',section='database', file='./inventory/_inventory.ini',allow_no_value=True) }}"
+port: 5984
 other_nodes: ["172.20.0.3","172.20.0.4"]
 cookie: a192aeb9904e6590849337933b000c99
 # Volume
