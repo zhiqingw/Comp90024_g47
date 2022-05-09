@@ -1,5 +1,9 @@
 import React from "react";
+import ReactEcharts from "echarts-for-react"; 
+import TextGraph from "../components/TestGraph";
 export default function Second(){
+
+
     
     return(
         <div>
@@ -12,6 +16,7 @@ export default function Second(){
             <h1>
                 Second
             </h1>
+            <TextGraph />
         </div>
 
     )
