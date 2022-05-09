@@ -11,22 +11,7 @@ export default function Home(){
 //   .then(json => console.log(json))
 
 
-var headers = new Headers();
 
-headers.append('Authorization', 'Basic ' + btoa("admin" + ':' + "admin"));
-
-  fetch('http://172.26.134.66:5984/twitter/_all_docs', {
-    method: "GET",
-    headers: headers,
-    // body: JSON.stringify({
-    //     name: "admin",
-    //     password: "admin"
-       
-    // }),
-  }).then((response) => response.json())
-  .then((data) => {
-    console.log(data.rows[0])
-  });
 // axios({
 //     method: 'get',
 //     url: `http://admin:admin@172.26.130.233:5984`,
@@ -55,6 +40,7 @@ headers.append('Authorization', 'Basic ' + btoa("admin" + ':' + "admin"));
                 <div class="navbar-nav">
                     <li class="active"><a href="/">Home</a></li>
                     <li><a href="/f1">Overview</a></li>
+                    <li><a href="/health">Health</a></li>
                 </div>
             </header>
         <h1>
