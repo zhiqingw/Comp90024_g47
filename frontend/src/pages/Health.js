@@ -1,7 +1,8 @@
 import React from "react";
 import ReactEcharts from "echarts-for-react"; 
 import HospotalMap from "../components/HospitalMap";
-export default function Health(){
+import TextGraph from '../components/TestGraph'
+export default function Health(props){
 
 
     
@@ -9,9 +10,9 @@ export default function Health(){
         <div>
             <header>
                 <div class="navbar-nav">
-                    <li><a href="/">Home</a></li>
+                    <li><a href="/">Overview</a></li>
 
-                    <li ><a href="/f1">Overview</a></li>
+                    <li ><a href="/environment">Environment</a></li>
                     <li class="active"><a href="/health">Health</a></li>
                 </div>
             </header>
@@ -19,6 +20,7 @@ export default function Health(){
                 Health
             </h1>
             <HospotalMap />
+            <TextGraph url={props.url} header={props.header}/>
         </div>
 
     )

@@ -31,14 +31,12 @@ export default class TestGraph extends React.Component {
     }
 
     fetchOption(){
-        var headers = new Headers();
-
-        headers.append('Authorization', 'Basic ' + btoa("admin" + ':' + "admin"));
+        
         // headers.append('Access-Control-Allow-Origin','*')
 
-        fetch('http://172.26.134.66:5984/twitter/8914b8269ed7f98dffcb73a6aa0012ee', {
+        fetch(this.props.url + '/twitter/8914b8269ed7f98dffcb73a6aa0012ee', {
             method: "GET",
-            headers: headers,
+            headers: this.props.header,
             // body: JSON.stringify({
             //     name: "admin",
             //     password: "admin"

@@ -1,7 +1,9 @@
 import React from "react";
 import axios from 'axios';
 import fetchToCurl from 'fetch-to-curl';
-export default function Home(){
+import RadarChart from "../components/RadarChart";
+import DoughnutChart from "../components/DoughnutChart";
+export default function Home(props){
     // const nano = require('nano')('http://admin:admin@172.26.130.233:5984');
     // nano.db.use('twitter').get()
 	// .then((body) => {
@@ -38,13 +40,15 @@ export default function Home(){
         <div>
             <header>
                 <div class="navbar-nav">
-                    <li class="active"><a href="/">Home</a></li>
-                    <li><a href="/f1">Overview</a></li>
+                    <li class="active"><a href="/">Overview</a></li>
+                    <li><a href="/environment">Environment</a></li>
                     <li><a href="/health">Health</a></li>
                 </div>
             </header>
         <h1>
             home
+            <RadarChart />
+            <DoughnutChart />
         </h1>
         </div>
 
