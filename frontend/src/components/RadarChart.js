@@ -61,10 +61,10 @@ export default class RadarChart extends React.Component {
             radar: {
               // shape: 'circle',
               indicator: [
-                { name: 'Environment', max: 6500 },
-                { name: 'Health', max: 16000 },
+                
+                { name: 'Health', max: 10000 },
                 { name: 'Education', max: 30000 },
-                { name: 'Environment', max: 38000 },
+                { name: 'Environment', max: 30000 },
               ]
             },
             series: [
@@ -73,11 +73,11 @@ export default class RadarChart extends React.Component {
                 type: 'radar',
                 data: [
                   {
-                    value: [4200, 3000, 20000, 18000],
+                    value: [4200, 3000, 20000],
                     name: 'Allocated Budget'
                   },
                   {
-                    value: [5000, 14000, 28000,  21000],
+                    value: [5000, 14000, 28000],
                     name: 'Actual Spending'
                   }
                 ]

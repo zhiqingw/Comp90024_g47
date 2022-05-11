@@ -13,7 +13,7 @@ function App() {
   return (
   <Router>
     <Routes>
-      <Route exact path='/' element={<Home/>}/>
+      <Route exact path='/' element={<Home url={url} header={headers}/>}/>
     </Routes>
     <Routes>
       <Route exact path='/environment' element={<Environment url={url} header={headers}/>}/>

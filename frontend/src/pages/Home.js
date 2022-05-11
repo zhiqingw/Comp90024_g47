@@ -40,16 +40,26 @@ export default function Home(props){
         <div>
             <header>
                 <div class="navbar-nav">
-                    <li class="active"><a href="/">Overview</a></li>
+                    <li class="active"><a href="/">Tweets Overview</a></li>
                     <li><a href="/environment">Environment</a></li>
                     <li><a href="/health">Health</a></li>
                 </div>
             </header>
-        <h1>
-            home
+    
+            
+           
+            <div className="doughnut-chart-left">
+                <DoughnutChart url={props.url} header={props.header}/>
+            </div>
+            <div className="doughnut-chart-right">
+                <DoughnutChart url={props.url} header={props.header}/>
+            </div>
+            
+            <div className="radar-chart">
             <RadarChart />
-            <DoughnutChart />
-        </h1>
+            </div>
+            
+     
         </div>
 
     )

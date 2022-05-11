@@ -60,3 +60,41 @@ text-decoration: none;
   
   padding-left: 300px;
 }
+
+.doughnut-chart-left{
+  /* display: inline-block; */
+  position: absolute;
+  height: 300px;
+  width: 400px;
+  margin-left: 250px;
+  margin-top: 70px;
+  
+}
+
+.doughnut-chart-right{
+  position: absolute;
+  height: 300px;
+  width: 400px;
+  margin-left: 750px;
+  margin-top: 70px;
+}
+
+.radar-chart{
+  margin-top: 400px;
+  height: 500px;
+}
+.health-left{
+  position: absolute;
+  margin-top: 20px;
+  margin-left: 30px;
+  height: 300px;
+  width: 650px;
+}
+
+.health-right{
+  position: absolute;
+  margin-top: 20px;
+  margin-left: 700px;
+  height: 300px;
+  width: 650px;
+}

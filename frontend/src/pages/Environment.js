@@ -9,7 +9,7 @@ export default function Environment(props){
         <div>
             <header>
                 <div class="navbar-nav">
-                    <li><a href="/">Overview</a></li>
+                    <li><a href="/">Tweets Overview</a></li>
                     <li class="active"><a href="/environment">Environment</a></li>
                     <li><a href="/health">Health</a></li>
                 </div>

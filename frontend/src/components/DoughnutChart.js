@@ -13,11 +13,13 @@ export default class DoughnutChart extends React.Component {
 
 
     componentDidMount(){
-        var eva = [0,0,0,0,0,0,0,0,0,0,0,0]
-        var temp = [0,0,0,0,0,0,0,0,0,0,0,0]
-        var pre = [0,0,0,0,0,0,0,0,0,0]
-        this.setState({option: this.initialOption(eva,temp, pre)})
-        // this.fetchOption();
+        var data = [
+            { value: 0, name: 'Positive tweets' },
+            { value: 0, name: 'Negative tweets' },
+            
+          ]
+        this.setState({option: this.initialOption(data)})
+        this.fetchOption();
         
         
     }
@@ -34,7 +36,7 @@ export default class DoughnutChart extends React.Component {
         
         // headers.append('Access-Control-Allow-Origin','*')
 
-        fetch(this.props.url + '/twitter/8914b8269ed7f98dffcb73a6aa0012ee', {
+        fetch(this.props.url + '/result/c414f40fbf9a3fa3d034c86b59c42a1f', {
             method: "GET",
             headers: this.props.header,
             // body: JSON.stringify({
@@ -44,13 +46,13 @@ export default class DoughnutChart extends React.Component {
             // }),
         }).then((response) => response.json())
         .then((data) => {
-            this.setState({option: this.initialOption(data.evaporation, data.Temperature, data.Precipitation)})
-            
+            this.setState({option: this.initialOption(data.data)})
+            console.log(data.data)
             // this.initialOption(data.Evaporation)
         });
     }
 
-    initialOption(evaporation, temperature, precipitation){
+    initialOption(data){
         var option = {
             tooltip: {
               trigger: 'item'
@@ -84,11 +86,7 @@ export default class DoughnutChart extends React.Component {
                 labelLine: {
                   show: false
                 },
-                data: [
-                  { value: 2348, name: 'Positive tweets' },
-                  { value: 735, name: 'Negative tweets' },
-                  
-                ]
+                data: data
               }
             ]
           };

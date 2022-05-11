@@ -13,9 +13,10 @@ export default class TestGraph extends React.Component {
 
 
     componentDidMount(){
-        var eva = [0,0,0,0,0,0,0,0,0,0,0,0]
-        var temp = [0,0,0,0,0,0,0,0,0,0,0,0]
-        var pre = [0,0,0,0,0,0,0,0,0,0]
+        var eva = [0,0,0,0,0]
+        var temp = [0,0,0,0,0]
+        var pre = [0,0,0,0,0]
+        var lga = ["","","","",""]
         this.setState({option: this.initialOption(eva,temp, pre)})
         this.fetchOption();
         
@@ -34,7 +35,7 @@ export default class TestGraph extends React.Component {
         
         // headers.append('Access-Control-Allow-Origin','*')
 
-        fetch(this.props.url + '/twitter/8914b8269ed7f98dffcb73a6aa0012ee', {
+        fetch(this.props.url + '/result/c414f40fbf9a3fa3d034c86b59c40922', {
             method: "GET",
             headers: this.props.header,
             // body: JSON.stringify({
@@ -44,13 +45,13 @@ export default class TestGraph extends React.Component {
             // }),
         }).then((response) => response.json())
         .then((data) => {
-            this.setState({option: this.initialOption(data.evaporation, data.Temperature, data.Precipitation)})
+            this.setState({option: this.initialOption(data.positive_tweets, data.negative_tweets, data.hospital_capacity,data.lga)})
             
             // this.initialOption(data.Evaporation)
         });
     }
 
-    initialOption(evaporation, temperature, precipitation){
+    initialOption(positive_tweets, negative_tweets, capacity,lga){
         var colors = ['#5470C6', '#91CC75', '#EE6666'];
         var option = {
             color: colors,
@@ -71,7 +72,7 @@ export default class TestGraph extends React.Component {
             }
             },
             legend: {
-            data: ['Evaporation', 'Precipitation', 'Temperature']
+            data: ['Positive Tweets', 'Negative Tweets', 'Capacity']
             },
             xAxis: [
             {
@@ -80,13 +81,13 @@ export default class TestGraph extends React.Component {
                 alignWithLabel: true
                 },
                 // prettier-ignore
-                data: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+                data: lga
             }
             ],
             yAxis: [
             {
                 type: 'value',
-                name: 'Evaporation',
+                name: 'Positive',
                 position: 'right',
                 alignTicks: true,
                 axisLine: {
@@ -96,12 +97,12 @@ export default class TestGraph extends React.Component {
                 }
                 },
                 axisLabel: {
-                formatter: '{value} ml'
+                formatter: '{value}'
                 }
             },
             {
                 type: 'value',
-                name: 'Precipitation',
+                name: 'Negative',
                 position: 'right',
                 alignTicks: true,
                 offset: 80,
@@ -112,12 +113,12 @@ export default class TestGraph extends React.Component {
                 }
                 },
                 axisLabel: {
-                formatter: '{value} ml'
+                formatter: '{value}'
                 }
             },
             {
                 type: 'value',
-                name: '温度',
+                name: 'capacity',
                 position: 'left',
                 alignTicks: true,
                 axisLine: {
@@ -127,27 +128,27 @@ export default class TestGraph extends React.Component {
                 }
                 },
                 axisLabel: {
-                formatter: '{value} °C'
+                formatter: '{value}'
                 }
             }
             ],
             series: [
             {
-                name: 'Evaporation',
+                name: 'Positive Tweets',
                 type: 'bar',
-                data: evaporation
+                data: positive_tweets
             },
             {
-                name: 'Precipitation',
+                name: 'Negative Tweets',
                 type: 'bar',
                 yAxisIndex: 1,
-                data: precipitation
+                data: negative_tweets
             },
             {
-                name: 'Temperature',
+                name: 'Capacity',
                 type: 'line',
                 yAxisIndex: 2,
-                data: temperature
+                data: capacity
             }
             ]
         }
