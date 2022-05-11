@@ -4,7 +4,8 @@ from ipaddress import ip_address
 
 username = "admin"
 password = "admin"
-ip_address = "172.26.134.66:5984"
+ip_address = "172.26.134.66"
+port = "5984"
 
 # bearer_token
 bearer_token = "AAAAAAAAAAAAAAAAAAAAAMzWcAEAAAAAgv5MpTF1XRA0DAmoZxXPMxZqetg%3DyIh6UFDUfB5OHgzrofiJC6II254QDdO7Qdp9XEDtOXFMpkiROv"
