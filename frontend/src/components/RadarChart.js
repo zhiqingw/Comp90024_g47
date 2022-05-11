@@ -13,11 +13,24 @@ export default class RadarChart extends React.Component {
 
 
     componentDidMount(){
-        var eva = [0,0,0,0,0,0,0,0,0,0,0,0]
-        var temp = [0,0,0,0,0,0,0,0,0,0,0,0]
-        var pre = [0,0,0,0,0,0,0,0,0,0]
-        this.setState({option: this.initialOption(eva,temp, pre)})
-        // this.fetchOption();
+        var data = [
+            {
+              value: [0, 0, 0],
+              name: 'Most positive LGA'
+            },
+            {
+              value: [0, 0, 0],
+              name: 'Most negative LGA'
+            }
+          ]
+        var indicator = [
+                
+            { name: 'Health', max: 4 },
+            { name: 'Education', max: 4 },
+            { name: 'Environment', max: 4 },
+          ]
+        this.setState({option: this.initialOption(data, indicator)})
+        this.fetchOption();
         
         
     }
@@ -34,7 +47,7 @@ export default class RadarChart extends React.Component {
         
         // headers.append('Access-Control-Allow-Origin','*')
 
-        fetch(this.props.url + '/twitter/8914b8269ed7f98dffcb73a6aa0012ee', {
+        fetch(this.props.url + '/result/c414f40fbf9a3fa3d034c86b59c46938', {
             method: "GET",
             headers: this.props.header,
             // body: JSON.stringify({
@@ -44,43 +57,27 @@ export default class RadarChart extends React.Component {
             // }),
         }).then((response) => response.json())
         .then((data) => {
-            this.setState({option: this.initialOption(data.evaporation, data.Temperature, data.Precipitation)})
+            this.setState({option: this.initialOption(data.data, data.indicator)})
             
             // this.initialOption(data.Evaporation)
         });
     }
 
-    initialOption(evaporation, temperature, precipitation){
+    initialOption(data, indicator){
         var option = {
-            title: {
-              text: 'Basic Radar Chart'
-            },
+            
             legend: {
-              data: ['Allocated Budget', 'Actual Spending']
+              data: ['Most positive LGA', 'Most negative LGA'],
             },
             radar: {
               // shape: 'circle',
-              indicator: [
-                
-                { name: 'Health', max: 10000 },
-                { name: 'Education', max: 30000 },
-                { name: 'Environment', max: 30000 },
-              ]
+              indicator: indicator
             },
             series: [
               {
                 name: 'Budget vs spending',
                 type: 'radar',
-                data: [
-                  {
-                    value: [4200, 3000, 20000],
-                    name: 'Allocated Budget'
-                  },
-                  {
-                    value: [5000, 14000, 28000],
-                    name: 'Actual Spending'
-                  }
-                ]
+                data: data
               }
             ]
           };

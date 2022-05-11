@@ -56,7 +56,7 @@ export default function Home(props){
             </div>
             
             <div className="radar-chart">
-            <RadarChart />
+            <RadarChart url={props.url} header={props.header}/>
             </div>
             
      
