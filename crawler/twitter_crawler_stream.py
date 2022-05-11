@@ -41,6 +41,10 @@ if __name__ == "__main__":
     couch = couchdb.Server(access_ip)
 
     streaming_client = tweepy.StreamingClient(bearer_token)
+
+    #streaming_client.add_rules(tweepy.StreamRule("melbourne"))
+    #streaming_client.filter()
+
     printer = IDPrinter(bearer_token)
     printer.sample()
 
