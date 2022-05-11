@@ -63,7 +63,7 @@ export default class DoughnutChart extends React.Component {
             },
             series: [
               {
-                name: 'Access From',
+                name: 'Tweet data',
                 type: 'pie',
                 radius: ['40%', '70%'],
                 avoidLabelOverlap: true,
