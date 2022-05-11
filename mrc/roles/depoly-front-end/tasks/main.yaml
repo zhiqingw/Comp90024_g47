@@ -1,0 +1,19 @@
+---
+
+- name: send frontend setup to frontend server
+  copy:
+    src: frontend
+    dest: /home/ubuntu
+
+- name: setup frontend
+  shell:  |
+    cd frontend
+    sudo npm install
+    sudo npm install kill-port-process -g
+    sudo npm install forever -g
+
+- name: start frontend
+  shell:  |
+    cd frontend
+    forever start node_modules/react-scripts/scripts/start.js
+
