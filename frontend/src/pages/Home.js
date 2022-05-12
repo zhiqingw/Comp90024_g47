@@ -3,6 +3,7 @@ import axios from 'axios';
 import fetchToCurl from 'fetch-to-curl';
 import RadarChart from "../components/RadarChart";
 import DoughnutChart from "../components/DoughnutChart";
+import DoughnutChartNegative from "../components/DoughnutChartNegative";
 export default function Home(props){
     // const nano = require('nano')('http://admin:admin@172.26.130.233:5984');
     // nano.db.use('twitter').get()
@@ -52,7 +53,7 @@ export default function Home(props){
                 <DoughnutChart url={props.url} header={props.header}/>
             </div>
             <div className="doughnut-chart-right">
-                <DoughnutChart url={props.url} header={props.header}/>
+                <DoughnutChartNegative url={props.url} header={props.header}/>
             </div>
             
             <div className="radar-chart">
