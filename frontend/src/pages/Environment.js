@@ -1,10 +1,14 @@
 import React from "react";
 import ReactEcharts from "echarts-for-react"; 
 import TextGraph from "../components/TestGraph";
+import PollutantMap from "../components/PollutantMap";
 export default function Environment(props){
 
 
+    var mapStyle="mapbox://styles/zhiqingw/cl32oa5lb000f14nxv4ffxees"
     
+    var mapboxAccessToken="pk.eyJ1IjoiemhpcWluZ3ciLCJhIjoiY2t0anJ1Y2xoMWV6NTJ3bm1xNnBoNWt0eiJ9.oBR-Za509LFKgj2khrxf2g"
+    var interactiveLayerIds=['pollutant']
     return(
         <div>
             <header>
@@ -17,6 +21,7 @@ export default function Environment(props){
             <h1>
                 Second
             </h1>
+            <PollutantMap mapStyle={mapStyle} mapboxAccessToken={mapboxAccessToken} interactiveLayerIds={interactiveLayerIds}/>
             <TextGraph url={props.url} header={props.header}/>
         </div>
 

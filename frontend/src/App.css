@@ -61,6 +61,10 @@ text-decoration: none;
   padding-left: 300px;
 }
 
+.pollutant-map{
+  
+  padding-left: 300px;
+}
 .doughnut-chart-left{
   /* display: inline-block; */
   position: absolute;
