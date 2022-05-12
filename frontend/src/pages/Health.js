@@ -1,8 +1,7 @@
 import React from "react";
 import ReactEcharts from "echarts-for-react"; 
 import HospitalMap from "../components/HospitalMap";
-import TextGraph from '../components/TestGraph'
-import HospitalGraph from "../components/TestGraph";
+import HospitalChart from '../components/HospitalChart'
 export default function Health(props){
 
 
@@ -17,9 +16,9 @@ export default function Health(props){
             <header>
                 <div class="navbar-nav">
                     <li><a href="/">Tweets Overview</a></li>
-
                     <li ><a href="/environment">Environment</a></li>
                     <li class="active"><a href="/health">Health</a></li>
+                    <li><a href="/entertainment">Entertainment</a></li>
                 </div>
             </header>
             <h1>
@@ -27,7 +26,7 @@ export default function Health(props){
             </h1>
             <HospitalMap mapStyle={mapStyle} mapboxAccessToken={mapboxAccessToken} interactiveLayerIds={interactiveLayerIds}/>
             <div className="health-left">
-            <HospitalGraph url={props.url} header={props.header}/>
+            <HospitalChart url={props.url} header={props.header}/>
             </div>
             
         </div>

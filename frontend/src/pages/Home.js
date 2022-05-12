@@ -44,6 +44,7 @@ export default function Home(props){
                     <li class="active"><a href="/">Tweets Overview</a></li>
                     <li><a href="/environment">Environment</a></li>
                     <li><a href="/health">Health</a></li>
+                    <li><a href="/entertainment">Entertainment</a></li>
                 </div>
             </header>
     

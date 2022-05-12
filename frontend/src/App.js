@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Home from "../src/pages/Home.js"
 import Health from './pages/Health';
 import Environment from './pages/Environment.js';
+import Entertainment from './pages/Entertainment';
 function App() {
   var url = "http://172.26.134.66:5984";
   
@@ -20,6 +21,9 @@ function App() {
     </Routes>
     <Routes>
       <Route exact path='/health' element={<Health url={url} header={headers}/>}/>
+    </Routes>
+    <Routes>
+      <Route exact path='/entertainment' element={<Entertainment url={url} header={headers}/>}/>
     </Routes>
   </Router>
   );
