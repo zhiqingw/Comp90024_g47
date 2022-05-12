@@ -3,7 +3,7 @@ import Map, {Popup} from 'react-map-gl';
 import 'mapbox-gl/dist/mapbox-gl.css';
 import ReactDOM from "react-dom"
 
-export default class HospotalMap extends React.Component {
+export default class HospitalMap extends React.Component {
 
     constructor(props) {
         super(props);

@@ -1,7 +1,8 @@
 import React from "react";
 import ReactEcharts from "echarts-for-react"; 
-import HospotalMap from "../components/HospitalMap";
+import HospitalMap from "../components/HospitalMap";
 import TextGraph from '../components/TestGraph'
+import HospitalGraph from "../components/TestGraph";
 export default function Health(props){
 
 
@@ -24,13 +25,11 @@ export default function Health(props){
             <h1>
                 Health
             </h1>
-            <HospotalMap mapStyle={mapStyle} mapboxAccessToken={mapboxAccessToken} interactiveLayerIds={interactiveLayerIds}/>
+            <HospitalMap mapStyle={mapStyle} mapboxAccessToken={mapboxAccessToken} interactiveLayerIds={interactiveLayerIds}/>
             <div className="health-left">
-            <TextGraph url={props.url} header={props.header}/>
+            <HospitalGraph url={props.url} header={props.header}/>
             </div>
-            <div className="health-right">
-            <TextGraph url={props.url} header={props.header}/>
-            </div>
+            
         </div>
 
     )

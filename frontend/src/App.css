@@ -90,15 +90,8 @@ text-decoration: none;
 .health-left{
   position: absolute;
   margin-top: 20px;
-  margin-left: 30px;
+  margin-left: 200px;
   height: 300px;
-  width: 650px;
+  width: 1000px;
 }
 
-.health-right{
-  position: absolute;
-  margin-top: 20px;
-  margin-left: 700px;
-  height: 300px;
-  width: 650px;
-}

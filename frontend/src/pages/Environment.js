@@ -2,6 +2,7 @@ import React from "react";
 import ReactEcharts from "echarts-for-react"; 
 import TextGraph from "../components/TestGraph";
 import PollutantMap from "../components/PollutantMap";
+import PollutantGraph from "../components/PollutantGraph";
 export default function Environment(props){
 
 
@@ -22,7 +23,9 @@ export default function Environment(props){
                 Second
             </h1>
             <PollutantMap mapStyle={mapStyle} mapboxAccessToken={mapboxAccessToken} interactiveLayerIds={interactiveLayerIds}/>
-            <TextGraph url={props.url} header={props.header}/>
+            <div className="health-left">
+            <PollutantGraph url={props.url} header={props.header}/>
+            </div>
         </div>
 
     )

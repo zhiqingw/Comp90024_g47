@@ -1,7 +1,7 @@
 import React from "react";
 import ReactEcharts from "echarts-for-react"; 
 
-export default class HospiltaGraph extends React.Component {
+export default class PollutantGraph extends React.Component {
     
 
 
@@ -35,7 +35,7 @@ export default class HospiltaGraph extends React.Component {
         
         // headers.append('Access-Control-Allow-Origin','*')
 
-        fetch(this.props.url + '/result/c414f40fbf9a3fa3d034c86b59c40922', {
+        fetch(this.props.url + '/result/bcc28c0a43686e117e66fcac7c4cc8c7', {
             method: "GET",
             headers: this.props.header,
             // body: JSON.stringify({
@@ -45,7 +45,7 @@ export default class HospiltaGraph extends React.Component {
             // }),
         }).then((response) => response.json())
         .then((data) => {
-            this.setState({option: this.initialOption(data.positive_tweets, data.negative_tweets, data.hospital_capacity,data.lga)})
+            this.setState({option: this.initialOption(data.positive_tweets, data.negative_tweets, data.pollutant,data.lga)})
             
             // this.initialOption(data.Evaporation)
         });
