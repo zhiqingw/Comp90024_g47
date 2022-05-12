@@ -8,7 +8,10 @@ export default class DoughnutChart extends React.Component {
     constructor(props) {
         super(props);
         
-        this.state = {option: {}};
+        this.state = {option: {},
+      lga: "",
+      percentage: ""
+      };
       }
 
 
@@ -29,7 +32,15 @@ export default class DoughnutChart extends React.Component {
 
 
     render() {
-      return <ReactEcharts option={this.state.option} />;
+      return <div>
+        <div className="lable-dougnutchart">
+        <div>{this.state.lga}</div>
+        <div>{this.state.percentage + " Positive"}</div>
+        <div>Tweets</div>
+        </div>
+      <ReactEcharts option={this.state.option} />
+      </div>
+      ;
     }
 
     fetchOption(){
@@ -46,7 +57,10 @@ export default class DoughnutChart extends React.Component {
             // }),
         }).then((response) => response.json())
         .then((data) => {
-            this.setState({option: this.initialOption(data.data)})
+            this.setState({option: this.initialOption(data.data),
+            lga: data.lga,
+            percentage: data.percentage
+            })
             console.log(data.data)
             // this.initialOption(data.Evaporation)
         });

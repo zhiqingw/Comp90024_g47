@@ -35,7 +35,7 @@ export default class PollutantGraph extends React.Component {
         
         // headers.append('Access-Control-Allow-Origin','*')
 
-        fetch(this.props.url + '/result/bcc28c0a43686e117e66fcac7c4cc8c7', {
+        fetch(this.props.url + '/result/d428bceb0b93d1b0b4c7eb8dc0e1cfb9', {
             method: "GET",
             headers: this.props.header,
             // body: JSON.stringify({

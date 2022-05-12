@@ -2,6 +2,10 @@
   text-align: center;
 }
 
+body {
+  background: aliceblue; 
+  margin: 0;
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -84,8 +88,11 @@ text-decoration: none;
 }
 
 .radar-chart{
+  position:absolute;
   margin-top: 400px;
-  height: 600px;
+  margin-left: 180px;
+  height: 300px;
+  width: 500px;
 }
 .health-left{
   position: absolute;
@@ -95,3 +102,29 @@ text-decoration: none;
   width: 1000px;
 }
 
+.lable-dougnutchart{
+  position: absolute;
+  margin-top: 120px;
+  margin-left: 150px;
+}
+
+.map-title{
+  font-weight: 800;
+  margin-top: 30px;
+  margin-bottom: 10px;
+  margin-left: 300px;
+}
+
+.chart-title{
+  font-weight: 800;
+  margin-top: 50px;
+  margin-bottom: 20px;
+  margin-left: 100px;
+}
+
+.application-overview{
+  position: absolute;
+  margin-top: 420px;
+  margin-left: 800px;
+  width: 450px;
+}

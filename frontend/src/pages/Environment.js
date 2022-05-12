@@ -19,11 +19,10 @@ export default function Environment(props){
                     <li><a href="/entertainment">Entertainment</a></li>
                 </div>
             </header>
-            <h1>
-                Second
-            </h1>
+            <div className="map-title">Melbourne Air Emission Map</div>
             <PollutantMap mapStyle={mapStyle} mapboxAccessToken={mapboxAccessToken} interactiveLayerIds={interactiveLayerIds}/>
             <div className="health-left">
+            <div className="chart-title">Twitter sentiment data and air pollution data</div>
             <PollutantGraph url={props.url} header={props.header}/>
             </div>
         </div>

@@ -21,11 +21,10 @@ export default function Health(props){
                     <li><a href="/entertainment">Entertainment</a></li>
                 </div>
             </header>
-            <h1>
-                Health
-            </h1>
+            <div className="map-title">Melbourne Hospital Capacity Map</div>
             <HospitalMap mapStyle={mapStyle} mapboxAccessToken={mapboxAccessToken} interactiveLayerIds={interactiveLayerIds}/>
             <div className="health-left">
+            <div className="chart-title">Twitter sentiment data and hospital capacity data</div>
             <HospitalChart url={props.url} header={props.header}/>
             </div>
             

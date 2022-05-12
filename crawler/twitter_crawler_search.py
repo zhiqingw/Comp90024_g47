@@ -2,7 +2,7 @@ from ipaddress import ip_address
 import tweepy
 import json 
 import couchdb
-import variables.py
+import variables
 import sys
 import re 
 

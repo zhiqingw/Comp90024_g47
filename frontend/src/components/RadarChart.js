@@ -35,31 +35,19 @@ export default class RadarChart extends React.Component {
         
     }
 
-    
-
-
-
     render() {
       return <ReactEcharts option={this.state.option} />;
     }
 
     fetchOption(){
-        
-        // headers.append('Access-Control-Allow-Origin','*')
 
         fetch(this.props.url + '/result/c414f40fbf9a3fa3d034c86b59c46938', {
             method: "GET",
             headers: this.props.header,
-            // body: JSON.stringify({
-            //     name: "admin",
-            //     password: "admin"
-            
-            // }),
         }).then((response) => response.json())
         .then((data) => {
             this.setState({option: this.initialOption(data.data, data.indicator)})
-            
-            // this.initialOption(data.Evaporation)
+
         });
     }
 
@@ -70,8 +58,8 @@ export default class RadarChart extends React.Component {
               data: ['Most positive LGA', 'Most negative LGA'],
             },
             radar: {
-              // shape: 'circle',
-              indicator: indicator
+              indicator: indicator,
+              center: ['50%', '60%']
             },
             series: [
               {

@@ -20,11 +20,10 @@ export default function Entertainment(props){
                     <li class="active"><a href="/entertainment">Entertainment</a></li>
                 </div>
             </header>
-            <h1>
-                Second
-            </h1>
+            <div className="map-title">Melbourne Restaurant, Cafe, Bar Seats Capacity Map</div>
             <EntertainmentMap mapStyle={mapStyle} mapboxAccessToken={mapboxAccessToken} interactiveLayerIds={interactiveLayerIds}/>
             <div className="health-left">
+            <div className="chart-title">Twitter sentiment data and Restaurant, Cafe, Bar Seats Capacity data</div>
             <EntertainmentChart url={props.url} header={props.header}/>
             </div>
         </div>
