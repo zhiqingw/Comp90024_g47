@@ -1,0 +1,15 @@
+---
+
+- name: send crawler setup to crawler server
+  copy:
+    src: crawler
+    dest: /home/ubuntu
+
+
+- name: start crawler
+  shell:  |
+    cd crawler
+    sudo chmod +x run_search.sh
+    sudo chmod +x run_stream.sh
+    nohup ./run_search.sh &
+    nohup ./run_stream.sh &

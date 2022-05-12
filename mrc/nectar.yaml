@@ -28,7 +28,20 @@
 ##    - role: openstack-common
 #    - role: depoly-couchdb
 
-- hosts: 172.26.130.158
+#- hosts: 172.26.130.158
+#  gather_facts: false
+#  become: true
+#  vars_files:
+#    - host_vars/nectar.yaml
+#  vars:
+#    - ansible_user: ubuntu
+#    - ansible_ssh_private_key_file: ~/.ssh/xuxux.pem
+#    - ansible_ssh_common_args: '-o StrictHostKeyChecking=no'
+#  roles:
+#    #- role: openstack-common
+#    - role: depoly-front-end
+
+- hosts: 172.26.133.101
   gather_facts: false
   become: true
   vars_files:
@@ -38,5 +51,5 @@
     - ansible_ssh_private_key_file: ~/.ssh/xuxux.pem
     - ansible_ssh_common_args: '-o StrictHostKeyChecking=no'
   roles:
-    #- role: openstack-common
-    - role: depoly-front-end
+    - role: openstack-common
+    - role: depoly-crawler
