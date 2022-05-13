@@ -1,36 +1,14 @@
 import argparse
-from ipaddress import ip_address
-from operator import truediv
-import tweepy
+
 import json
 import couchdb
 from tweepy import StreamingClient, StreamRule, Tweet
 
 import variables
 import sys
-import re
 
 
-# test valid ip address
-# https://thispointer.com/check-if-a-string-is-a-valid-ip-address-in-python/ 
-def valid_IP_Address(ip_address_string):
-    result = True
-    match_ip = re.search(r"^(\d{1,3})\.(\d{1,3})\.(\d{1,3})\.(\d{1,3})$", ip_address_string)
-    if match_ip is None:
-        return False
-    else:
-        for value in match_ip.groups():
-            if int(value) > 255:
-                return False
-                break
-    return result
 
-
-# test valid port
-def valid_port(port_num):
-    if (len(port_num) <= 5) & (port_num.isnumeric()):
-        return True
-    return False
 
 
 class TweetListener(StreamingClient):
@@ -73,9 +51,7 @@ if __name__ == "__main__":
         print("missing input, need -p -i")
         sys.exit()
 
-    if not (valid_IP_Address(ip_address) and valid_port(port)):
-        print("invalid input, check your ip address and port")
-        sys.exit()
+
 
     # bearer_token
     bearer_token = variables.bearer_token1

@@ -1,13 +1,6 @@
-import argparse
 import tweepy
-import json
+import json 
 import couchdb
-import variables
-import sys
-
-
-
-
 
 
 def crawler_search(couch):
@@ -23,7 +16,7 @@ def crawler_search(couch):
         id = i.data['id']
         text = i.data['text']
         data = {"id": id, "text": text}
-        if 'geo' in i.data.keys() and 'coordinates' in i.data['geo'].keys():
+        if 'geo' in i.data.keys():
             geo = i.data['geo']
             data = {"id": id, "geo": geo, "text": text}
             comb = json.dumps(data)
@@ -35,26 +28,23 @@ def crawler_search(couch):
             useless_db.save(db_line)
 
 
+
 if __name__ == "__main__":
 
-    parser = argparse.ArgumentParser()
-    parser.add_argument('-i', help="i stands for ip address")
-    parser.add_argument('-p', help="p stands for port")
-    args = parser.parse_args()
-    if args.i and args.p:
-        ip_address = str(args.i)
-        port = str(args.p)
-    else:
-        print("missing input, need -p -i")
-        sys.exit()
-
-
     # bearer_token
-    bearer_token = variables.bearer_token1
+    bearer_token = "AAAAAAAAAAAAAAAAAAAAAMzWcAEAAAAAgv5MpTF1XRA0DAmoZxXPMxZqetg%3DyIh6UFDUfB5OHgzrofiJC6II254QDdO7Qdp9XEDtOXFMpkiROv"
+
+    # consumer key and consumer secret key
+    consumer_key = "khJZGL8dgSNqbLMWqwF1ThApo"
+    consumer_secret = "m83j60DwamMdzESa1qt3M4vaPzsGw1F9kwZFLagTT9XB2RKKNO"
+
+    # access token and access secret token
+    access_token = "1521136048264425473-v0qMhh8K40exTZu0fl4JJOM6wCEW0z"
+    access_token_secret = "LQ3BrS0Zz7NmbpJW6WWs3lFBdyY3yXeQPygTxCJQXdf7B"
 
     # initiate database access
-    access_ip = "http://" + variables.username + ":" + variables.password + "@" + ip_address + ":" + port + "/"
-    couch = couchdb.Server(access_ip)
+    couch = couchdb.Server('http://admin:admin@172.26.134.66:5984/')
 
-    while (True):
+    while(True):
         crawler_search(couch)
+

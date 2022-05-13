@@ -7,7 +7,7 @@ password = "admin"
 
 
 # bearer_token
-bearer_token1 = "AAAAAAAAAAAAAAAAAAAAAMzWcAEAAAAAgv5MpTF1XRA0DAmoZxXPMxZqetg%3DyIh6UFDUfB5OHgzrofiJC6II254QDdO7Qdp9XEDtOXFMpkiROv"
+bearer_token1 = "AAAAAAAAAAAAAAAAAAAAAOAHcgEAAAAA1z9f%2BahUhitYYNGOUfS1vChnczs%3DOEGQZF9Y7kM7jJH6p8Hjml9u3XqE48YzHtyDqX9Qj9zVwE93SR"
 
 # consumer key and consumer secret key
 consumer_key = "khJZGL8dgSNqbLMWqwF1ThApo"
