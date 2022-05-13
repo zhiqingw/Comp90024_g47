@@ -21,11 +21,21 @@ export default function Entertainment(props){
                 </div>
             </header>
             <div className="map-title">Melbourne Restaurant, Cafe, Bar Seats Capacity Map</div>
+            
             <EntertainmentMap mapStyle={mapStyle} mapboxAccessToken={mapboxAccessToken} interactiveLayerIds={interactiveLayerIds}/>
+            <div class="map-overlay" id="map-legend"></div>
             <div className="health-left">
             <div className="chart-title">Twitter sentiment data and Restaurant, Cafe, Bar Seats Capacity data</div>
             <EntertainmentChart url={props.url} header={props.header}/>
+            {/* <div className="parkmap-legend">
+                <div>
+                    <span class = "legend-key-dot" style={{color: "#0cbb2c"}}></span>
+                    <span>{"<10"}</span>
+                </div>
+
+            </div> */}
             </div>
+            
         </div>
 
     )

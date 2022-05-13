@@ -23,6 +23,7 @@ export default function Health(props){
             </header>
             <div className="map-title">Melbourne Hospital Capacity Map</div>
             <HospitalMap mapStyle={mapStyle} mapboxAccessToken={mapboxAccessToken} interactiveLayerIds={interactiveLayerIds}/>
+            <div class="map-overlay" id="map-legend"></div>
             <div className="health-left">
             <div className="chart-title">Twitter sentiment data and hospital capacity data</div>
             <HospitalChart url={props.url} header={props.header}/>

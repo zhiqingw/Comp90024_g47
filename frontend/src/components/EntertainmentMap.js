@@ -15,9 +15,51 @@ export default class EntertainmentMap extends React.Component {
         };
       }
 
-      componentDidMount(){}
+      componentDidMount(){
+
+        let types = [
+          {label: "<10",
+            colors: "#0cbb2c"
+          },
+          {label: "<10",
+            colors: "#0cbb2c"
+          },
+          {label: "<10",
+            colors: "#0cbb2c"
+          }
+      
+        ]
+        let legend = document.querySelector('#map-legend');
+        // let i = 0;
+        // myNode = document.getElementById("foo");
+        while (legend.firstChild) {
+          legend.removeChild(legend.lastChild);
+        }
+        for (let type of types) {
+        
+          let item = document.createElement('div');
+      
+          let key = document.createElement('span');
+          
+          key.classList.add('legend-key-dot');
+          
+          
+          key.style.backgroundColor = type.colors;
+      
+          let value = document.createElement('span');
+          value.innerHTML = type.label;
+          item.appendChild(key);
+          item.appendChild(value);
+          legend.appendChild(item);
+          
+          
+        }
+      }
 
     render(){
+      
+
+      
         return <div className="hospital-map">
   <Map
     initialViewState={{
@@ -41,17 +83,17 @@ export default class EntertainmentMap extends React.Component {
             })
         , 500);
     }} 
-    >
-    {this.state.showPopup && (
-      <Popup longitude={this.state.longitude} latitude={this.state.latitude}
-        anchor="bottom"
-        onClose={() =>this.setState({showPopup:false}) }
-        >
-        <h1>{this.state.features.rd_seg_dsc}</h1>
-      </Popup>)
+    // >
+    // {this.state.showPopup && (
+    //   <Popup longitude={this.state.longitude} latitude={this.state.latitude}
+    //     anchor="bottom"
+    //     onClose={() =>this.setState({showPopup:false}) }
+    //     >
+    //     <h1>hello</h1>
+    //   </Popup>)
       
-      }
-    </Map>
+    //   }
+   ></Map>
   
   </div>;
     }

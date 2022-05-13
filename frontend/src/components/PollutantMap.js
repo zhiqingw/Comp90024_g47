@@ -15,7 +15,45 @@ export default class HospotalMap extends React.Component {
         };
       }
 
-      componentDidMount(){}
+      componentDidMount(){
+        let types = [
+          {label: "<10",
+            colors: "#0cbb2c"
+          },
+          {label: "<10",
+            colors: "#0cbb2c"
+          },
+          {label: "<10",
+            colors: "#0cbb2c"
+          }
+      
+        ]
+        let legend = document.querySelector('#map-legend');
+        // let i = 0;
+        // myNode = document.getElementById("foo");
+        while (legend.firstChild) {
+          legend.removeChild(legend.lastChild);
+        }
+        for (let type of types) {
+        
+          let item = document.createElement('div');
+      
+          let key = document.createElement('span');
+          
+          key.classList.add('legend-key-dot');
+          
+          
+          key.style.backgroundColor = type.colors;
+      
+          let value = document.createElement('span');
+          value.innerHTML = type.label;
+          item.appendChild(key);
+          item.appendChild(value);
+          legend.appendChild(item);
+          
+          
+        }
+      }
 
     render(){
         return <div className="pollutant-map">

@@ -128,3 +128,25 @@ text-decoration: none;
   margin-left: 800px;
   width: 450px;
 }
+
+#map-legend{
+  float: left;
+  position: absolute;
+  margin-left: 280px;
+  margin-top: 10px;
+  background: rgba(255, 255, 255, 0.8);
+  width: 160px;
+  top:100px;
+  left: 2%;
+
+}
+
+.legend-key-dot {
+  display: inline-block;
+  border-radius: 50%;
+  width: 7px;
+  height: 7px;
+  margin-right: 5px;
+  margin-left: 5px;
+  /* margin-bottom: 4px; */
+}

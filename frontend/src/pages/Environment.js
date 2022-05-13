@@ -21,6 +21,7 @@ export default function Environment(props){
             </header>
             <div className="map-title">Melbourne Air Emission Map</div>
             <PollutantMap mapStyle={mapStyle} mapboxAccessToken={mapboxAccessToken} interactiveLayerIds={interactiveLayerIds}/>
+            <div class="map-overlay" id="map-legend"></div>
             <div className="health-left">
             <div className="chart-title">Twitter sentiment data and air pollution data</div>
             <PollutantGraph url={props.url} header={props.header}/>
