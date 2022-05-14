@@ -1,17 +1,18 @@
 
 from textblob import TextBlob
 import pandas as pd
+import numpy as np
 
 def data_processing(df):
 	data = pd.DataFrame()
-	data['coordinates'] = df['rows'].apply(lambda x: x['doc']['coordinates'])
+	data['coordinates'] = df['doc'].apply(lambda x: x['doc']['coordinates'])
 	data = data.dropna(axis=0, subset=['coordinates'])
 	data['long_lat'] = data['coordinates'].apply(lambda x: np.array(x['coordinates'])) ## geo coordinates
 
-	data['lang'] = df['rows'].apply(lambda x: x['doc']['lang'])
+	data['lang'] = df['doc'].apply(lambda x: x['doc']['lang'])
 	data = data[~data['lang'].isin(['und', None])]  # drop undefined language
  
-	data['tweet'] = df['rows'].apply(lambda x: x['doc']['text']) ## get tweet text
+	data['tweet'] = df['doc'].apply(lambda x: x['doc']['text']) ## get tweet text
  
 	data['tweet_textBlob'] = data['tweet'].apply(lambda x: TextBlob(x)) ## turn text to TextBlob object
 
