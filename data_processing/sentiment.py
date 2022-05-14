@@ -1,7 +1,5 @@
-
 from textblob import TextBlob
 import pandas as pd
-import numpy as np
 
 def data_processing(df):
 	data = pd.DataFrame()
@@ -20,6 +18,6 @@ def data_processing(df):
 
 	return data
 
-df = pd.read_json("twitter-melb.json") # read twitter file
+# df = pd.read_json("twitter-melb.json") # read twitter file
 
-data = data_processing(df)
+# data = data_processing(df)
