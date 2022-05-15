@@ -13,9 +13,8 @@ all_lga_and_sentiment = uname_list.json()["rows"]
 res = requests.get(url='http://admin:admin@172.26.134.66:5984/sentiment_map/_all_docs')
 lga_sentiment_map = {}
 
-inner_melbourne_list = ['Carlton', 'Carlton North', 'Docklands', 
-'East Melbourne', 'Flemington', 'Jolimont',
-'Kensington', 'Melbourne', 'North Melbourne', 'Port Melbourne',
+inner_melbourne_list = ['Carlton', 'Carlton North', 'Docklands', 'East Melbourne', 
+'Flemington', 'Jolimont', 'Kensington', 'Melbourne', 'North Melbourne', 'Port Melbourne',
 'Parkville','Southbank','South Wharf','South Yarra', 'West Melbourne'
 ]
 
