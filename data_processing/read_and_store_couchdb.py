@@ -5,11 +5,11 @@ from textblob import TextBlob
 import requests
 
 couch = couchdb.Server('http://admin:admin@172.26.134.66:5984/')
-db = couch['twenty_gig_tweets']
+db = couch['search_tweets']
 
 
 
-res = requests.get(url='http://admin:admin@172.26.134.66:5984/twenty_gig_tweets/_all_docs')
+res = requests.get(url='http://admin:admin@172.26.134.66:5984/search_tweets/_all_docs')
 all_id = res.json()['rows']
 # print(all_id)
 for id in all_id:
@@ -43,11 +43,14 @@ for id in all_id:
 
 
     # get the lga of the geo of this tweet
+  
     try:
         curr["lga"] = geo_convertor(coordinate_format)
-        
-    except:
+            
+    except:        
         curr["lga"] = "unknown"
+   
+
     print(curr)
     
     db.save(curr)
