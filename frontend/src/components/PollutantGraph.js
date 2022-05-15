@@ -72,7 +72,7 @@ export default class PollutantGraph extends React.Component {
             }
             },
             legend: {
-            data: ['Positive Tweets', 'Negative Tweets', 'Capacity']
+            data: ['Positive Tweets', 'Negative Tweets', 'Pollutant']
             },
             xAxis: [
             {
@@ -122,7 +122,7 @@ export default class PollutantGraph extends React.Component {
             },
             {
                 type: 'value',
-                name: 'capacity',
+                name: 'Pollutant',
                 position: 'left',
                 alignTicks: true,
                 axisLine: {
@@ -149,7 +149,7 @@ export default class PollutantGraph extends React.Component {
                 data: negative_tweets
             },
             {
-                name: 'Capacity',
+                name: 'Pollutant',
                 type: 'line',
                 yAxisIndex: 2,
                 data: capacity
