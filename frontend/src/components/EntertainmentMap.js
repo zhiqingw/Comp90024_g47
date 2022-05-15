@@ -19,13 +19,19 @@ export default class EntertainmentMap extends React.Component {
 
         let types = [
           {label: "<10",
-            colors: "#0cbb2c"
+            colors: "#f09d9d"
           },
-          {label: "<10",
-            colors: "#0cbb2c"
+          {label: "10-50",
+            colors: "#f3f09b"
           },
-          {label: "<10",
-            colors: "#0cbb2c"
+          {label: "50-100",
+            colors: "#5ee865"
+          },
+          {label: "100-200",
+            colors: "#09bec8"
+          },
+          {label: ">200",
+            colors: "#09bec8"
           }
       
         ]

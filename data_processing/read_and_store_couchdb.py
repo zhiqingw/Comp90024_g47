@@ -37,8 +37,9 @@ for id in all_id:
     # calculate the sentiment of this tweet
     text_textBlob = TextBlob(text)
     sentiment = text_textBlob.sentiment.polarity
+    tweetId = curr["id"]
     data = {}
-    data["id"] = curr['id']
+    data["_id"] = tweetId
     if(sentiment > 0):
         data["sentiment"] = 1
     elif(sentiment < 0):
@@ -57,5 +58,9 @@ for id in all_id:
    
 
     print(data)
+    res = requests.get(url=('http://admin:admin@172.26.134.66:5984/process_melb_tweet/'+str(tweetId)))
+    if res.ok:
+        pass
+    else: 
+        new_db.save(data)
     
-    new_db.save(data)
