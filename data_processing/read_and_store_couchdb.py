@@ -49,18 +49,20 @@ for id in all_id:
 
 
     # get the lga of the geo of this tweet
-  
-    try:
-        data["lga"] = geo_convertor(coordinate_format)
-            
-    except:        
-        data["lga"] = "unknown"
-   
-
-    print(data)
     res = requests.get(url=('http://admin:admin@172.26.134.66:5984/process_melb_tweet/'+str(tweetId)))
     if res.ok:
-        pass
+        continue
     else: 
+        try:
+            data["lga"] = geo_convertor(coordinate_format)
+                
+        except:        
+            data["lga"] = "unknown"
         new_db.save(data)
+        print(data)
+    
+   
+
+    
+    
     

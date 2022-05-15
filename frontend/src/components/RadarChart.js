@@ -52,10 +52,14 @@ export default class RadarChart extends React.Component {
     }
 
     initialOption(data, indicator){
+        var legend_data = []
+        for(let i = 0; i < data.length; i++){
+          legend_data.push(data[i]['name'])
+        }
         var option = {
             
             legend: {
-              data: ['Most positive LGA', 'Most negative LGA'],
+              data: legend_data,
             },
             radar: {
               indicator: indicator,

@@ -19,6 +19,7 @@ map = requests.get(url='http://admin:admin@172.26.134.66:5984/sentiment_map/' + 
 
 mel_tweets = map.json()['map']
 
+# process sentiment map
 sum_map = get_sum_map(mel_tweets)
 max_positive_lga = get_max_positve(sum_map)
 max_negative_lga = get_max_negative(sum_map)
@@ -31,6 +32,7 @@ positve_lga['lga'] = max_positive_lga['lga']
 positve_lga['percentage'] = str(int(max_positive_lga['positive_percentage']*100)) + "%"
 positve_lga['data'][0]['value'] = max_positive_lga['positive']
 positve_lga['data'][1]['value'] = max_positive_lga['negative']
+positve_lga['data'][2]['value'] = max_positive_lga['neutral']
 db.save(positve_lga)
 
 # save most negative lga
@@ -39,6 +41,7 @@ negative_lga['lga'] = max_negative_lga['lga']
 negative_lga['percentage'] = str(int(max_negative_lga['negative_percentage']*100)) + "%"
 negative_lga['data'][0]['value'] = max_negative_lga['positive']
 negative_lga['data'][1]['value'] = max_negative_lga['negative']
+negative_lga['data'][2]['value'] = max_negative_lga['neutral']
 db.save(negative_lga)
 
 # save hospital result
