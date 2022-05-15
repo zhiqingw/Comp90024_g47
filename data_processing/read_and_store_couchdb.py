@@ -5,13 +5,16 @@ from textblob import TextBlob
 import requests
 
 couch = couchdb.Server('http://admin:admin@172.26.134.66:5984/')
-db = couch['twitter']
+db = couch['twenty_gig_tweets']
+
+new_db = couch['process_melb_tweet']
 
 
 
-res = requests.get(url='http://admin:admin@172.26.134.66:5984/twitter/_all_docs')
+
+res = requests.get(url='http://admin:admin@172.26.134.66:5984/twenty_gig_tweets/_all_docs')
 all_id = res.json()['rows']
-# print(all_id)
+print(all_id)
 for id in all_id:
     curr = db[id['id']]
     # skip the data already assign sentiment and lga
@@ -34,23 +37,25 @@ for id in all_id:
     # calculate the sentiment of this tweet
     text_textBlob = TextBlob(text)
     sentiment = text_textBlob.sentiment.polarity
+    data = {}
+    data["id"] = curr['id']
     if(sentiment > 0):
-        curr["sentiment"] = 1
+        data["sentiment"] = 1
     elif(sentiment < 0):
-        curr["sentiment"] = -1
+        data["sentiment"] = -1
     else:
-        curr["sentiment"] = 0
+        data["sentiment"] = 0
 
 
     # get the lga of the geo of this tweet
   
     try:
-        curr["lga"] = geo_convertor(coordinate_format)
+        data["lga"] = geo_convertor(coordinate_format)
             
     except:        
-        curr["lga"] = "unknown"
+        data["lga"] = "unknown"
    
 
-    print(curr)
+    print(data)
     
-    db.save(curr)
+    new_db.save(data)
