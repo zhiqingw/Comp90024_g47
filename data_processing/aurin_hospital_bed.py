@@ -28,7 +28,7 @@ def process_hospital(data):
     
     return sortdict
 
-hospital = process_hospital('hospital.csv')
+# hospital = process_hospital('hospital.csv')
     
     
     

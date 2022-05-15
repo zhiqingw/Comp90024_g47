@@ -26,7 +26,7 @@ def process_seat(data):
         
     return sortdict
 
-seat = process_seat('seat.csv')
+# seat = process_seat('seat.csv')
     
     
     

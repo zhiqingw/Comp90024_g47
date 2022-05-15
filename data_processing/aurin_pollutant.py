@@ -22,7 +22,7 @@ def process_pollutant(data):
     
     return sortdict
 
-pollutant = process_pollutant('pollutant.csv')
+# pollutant = process_pollutant('pollutant.csv')
     
     
     
