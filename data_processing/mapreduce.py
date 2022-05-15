@@ -6,12 +6,21 @@ couch = couchdb.Server('http://admin:admin@172.26.134.66:5984/')
 db = couch['sentiment_map']
 # 'http://admin:admin@172.26.134.66:5984/twenty_gig_tweets/_design/count_tweets_sentiment/_view/lga?group=true'
 # http://admin:admin@172.26.134.66:5984/student/_design/info/_view/count?group=true
-db_name = "search_tweets"
+db_name = "twenty_gig_tweets"
 uname_list = requests.get('http://admin:admin@172.26.134.66:5984/' + db_name + '/_design/count_tweets_sentiment/_view/lga?group=true')
 all_lga_and_sentiment = uname_list.json()["rows"]
 
 res = requests.get(url='http://admin:admin@172.26.134.66:5984/sentiment_map/_all_docs')
 lga_sentiment_map = {}
+
+inner_melbourne_list = ['Carlton', 'Carlton North', 'Docklands', 
+'East Melbourne', 'Flemington', 'Jolimont',
+'Kensington', 'Melbourne', 'North Melbourne', 'Port Melbourne',
+'Parkville','Southbank','South Wharf','South Yarra', 'West Melbourne'
+]
+
+for i in inner_melbourne_list:
+    lga_sentiment_map[i] = {}
 
 # loop through the mapreduce result
 for i in all_lga_and_sentiment:
@@ -23,9 +32,9 @@ for i in all_lga_and_sentiment:
         elif(i['key'][0] < 0):
             sentiment = "negative"
         value = i['value']
-        if(lga not in lga_sentiment_map):
-            lga_sentiment_map[lga] = {}
-        lga_sentiment_map[lga][sentiment] = value
+        if(lga in lga_sentiment_map):
+            lga_sentiment_map[lga][sentiment] = value
+        # lga_sentiment_map[lga][sentiment] = value
 
 sentiment_map = {}
 
