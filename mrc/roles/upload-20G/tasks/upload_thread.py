@@ -22,7 +22,7 @@ def save_to_db():
 
 
 
-    db = couch['twitter-melb']
+    db = couch['twitter']
     #db = couch.create('green')
     print("created database")
     #db.save('green_space_safety_visit_to_green_space_more_than_once_perwk-8898569845817672567.json')
@@ -59,14 +59,16 @@ def save_to_db():
             print(row)
             #rows = (int) 14:
             #break 
-        elif(counter == 2500002): 
-            break
         else:
             #print(row)
-            print(counter)
-            data = row[:-2]
-            db_line = json.loads(data)
-            db.save(db_line)
+            try:
+                print(counter)
+                data = row[:-2]
+                db_line = json.loads(data)
+                db.save(db_line)
+            except Exception:
+                pass
+
 
   
 if __name__ == "__main__":

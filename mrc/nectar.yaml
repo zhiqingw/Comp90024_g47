@@ -14,7 +14,7 @@
 - hosts: localhost
   roles:
     - role: add-host
-
+#
 #- hosts: database
 #  gather_facts: false
 #  become: true
@@ -41,7 +41,20 @@
 #    #- role: openstack-common
 #    - role: depoly-front-end
 
-- hosts: 172.26.133.101
+- hosts: crawler
+  gather_facts: false
+  become: true
+  vars_files:
+    - host_vars/nectar.yaml
+  vars:
+    - ansible_user: ubuntu
+    - ansible_ssh_private_key_file: ~/.ssh/xuxux.pem
+    - ansible_ssh_common_args: '-o StrictHostKeyChecking=no'
+  roles:
+    #- role: openstack-common
+    - role: depoly-crawler
+
+- hosts: 172.26.130.233
   gather_facts: false
   become: true
   vars_files:
@@ -52,17 +65,5 @@
     - ansible_ssh_common_args: '-o StrictHostKeyChecking=no'
   roles:
     - role: openstack-common
-    - role: depoly-crawler
+    - role: upload-20G
 
-#- hosts: 172.26.130.233
-#  gather_facts: false
-#  become: true
-#  vars_files:
-#    - host_vars/nectar.yaml
-#  vars:
-#    - ansible_user: ubuntu
-#    - ansible_ssh_private_key_file: ~/.ssh/xuxux.pem
-#    - ansible_ssh_common_args: '-o StrictHostKeyChecking=no'
-#  roles:
-#    - role: openstack-common
-#    - role: upload-20G
