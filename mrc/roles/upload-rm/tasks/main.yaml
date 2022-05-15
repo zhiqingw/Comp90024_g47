@@ -1,16 +1,5 @@
 ---
 
-- name: send upload 20Gb to frontend server
-  copy:
-    src: upload_thread.py
-    dest: /home/ubuntu
-
-- name: send run.sh to frontend server
-  copy:
-    src: run.sh
-    dest: /home/ubuntu
-
-
 - name: send run.sh to frontend server
   copy:
     src: run_r.sh
