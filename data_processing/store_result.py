@@ -17,10 +17,9 @@ res = requests.get(url='http://admin:admin@172.26.134.66:5984/sentiment_map/_all
 id = res.json()['rows'][0]['id']
 map = requests.get(url='http://admin:admin@172.26.134.66:5984/sentiment_map/' + id)
 
-mel_tweets = map.json()['mel_tweets']
-stream_and_search = map.json()['stream_and_search']
+mel_tweets = map.json()['map']
 
-sum_map = get_sum_map(mel_tweets, stream_and_search)
+sum_map = get_sum_map(mel_tweets)
 max_positive_lga = get_max_positve(sum_map)
 max_negative_lga = get_max_negative(sum_map)
 # print(max_positive_lga)
@@ -29,7 +28,7 @@ max_negative_lga = get_max_negative(sum_map)
 # save most positive lga
 positve_lga = db['c414f40fbf9a3fa3d034c86b59c42a1f']
 positve_lga['lga'] = max_positive_lga['lga']
-positve_lga['percentage'] = str(max_positive_lga['positive_percentage']*100) + "%"
+positve_lga['percentage'] = str(int(max_positive_lga['positive_percentage']*100)) + "%"
 positve_lga['data'][0]['value'] = max_positive_lga['positive']
 positve_lga['data'][1]['value'] = max_positive_lga['negative']
 db.save(positve_lga)
@@ -120,7 +119,7 @@ radar['data'][0]["name"] = max_positive_lga['lga']
 positive_scale = []
 positive_hospital = hospital_res[max_positive_lga['lga']]
 positive_seat = seat_res[max_positive_lga['lga']]
-positive_pollution = pollutant_res[max_positive_lga['lga']]
+positive_pollution = -pollutant_res[max_positive_lga['lga']]
 positive_scale.append(positive_hospital)
 positive_scale.append(positive_seat)
 positive_scale.append(positive_pollution)
@@ -130,15 +129,15 @@ radar['data'][1]["name"] = max_negative_lga['lga']
 negative_scale = []
 negative_hospital = hospital_res[max_negative_lga['lga']]
 negative_seat = seat_res[max_negative_lga['lga']]
-negative_pollution = pollutant_res[max_negative_lga['lga']]
+negative_pollution = -pollutant_res[max_negative_lga['lga']]
 negative_scale.append(negative_hospital)
 negative_scale.append(negative_seat)
 negative_scale.append(negative_pollution)
 radar['data'][1]["value"] = negative_scale
 # indicator
 radar['indicator'][0]['max']  = hospital_capacity[0]
-radar['indicator'][1]['max'] =  seat_capacity[0]
-radar['indicator'][2]['max']  = -pollutant_emmision[0]
+radar['indicator'][1]['max'] =  seat_capacity[-1]
+radar['indicator'][2]['max']  = 0
 # print(radar)
 db.save(radar)
 

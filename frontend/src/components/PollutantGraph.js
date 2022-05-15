@@ -76,6 +76,10 @@ export default class PollutantGraph extends React.Component {
             },
             xAxis: [
             {
+                axisLabel:{
+                    show: true,
+                    rotate: 40,
+                },
                 type: 'category',
                 axisTick: {
                 alignWithLabel: true

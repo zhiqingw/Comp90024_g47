@@ -21,7 +21,7 @@ def process_seat(data):
         count = seat.loc[seat[' suburb'] == suburb, ' number_of_seats'].sum()
         output[suburb] = int(count)
     
-    marklist = sorted(output.items(), key=lambda x:x[1], reverse = True)
+    marklist = sorted(output.items(), key=lambda x:x[1])
     sortdict = dict(marklist)
         
     return sortdict

@@ -39,7 +39,7 @@ def get_max_negative(sum_map):
 
 
 
-def get_sum_map(mel_tweets, stream_and_search):
+def get_sum_map(mel_tweets):
     sum_map = {}
 
     for i in mel_tweets.keys():
@@ -53,14 +53,6 @@ def get_sum_map(mel_tweets, stream_and_search):
             negative += mel_tweets[i]['negative']
         if "neutral" in mel_tweets[i]:
             neutral += mel_tweets[i]['neutral']
-        
-        if "positive" in stream_and_search[i]:
-            positive += stream_and_search[i]['positive']
-        if "negative" in stream_and_search[i]:
-            negative += stream_and_search[i]['negative']
-        if "neutral" in stream_and_search[i]:
-            neutral += stream_and_search[i]['neutral']
-        
         sum_map[i]['positive'] = positive
         sum_map[i]['negative'] = negative
         sum_map[i]['neutral'] = neutral
@@ -78,10 +70,10 @@ id = res.json()['rows'][0]['id']
 map = requests.get(url='http://admin:admin@172.26.134.66:5984/sentiment_map/' + id)
 # print(map.json())
 
-mel_tweets = map.json()['mel_tweets']
-stream_and_search = map.json()['stream_and_search']
+mel_tweets = map.json()['map']
 
-sum_map = get_sum_map(mel_tweets, stream_and_search)
+
+sum_map = get_sum_map(mel_tweets)
 get_max_positve(sum_map)
 get_max_negative(sum_map)
 

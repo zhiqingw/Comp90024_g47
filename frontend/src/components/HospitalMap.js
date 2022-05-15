@@ -18,13 +18,19 @@ export default class HospitalMap extends React.Component {
       componentDidMount(){
         let types = [
           {label: "<10",
-            colors: "#0cbb2c"
+            colors: "#fca6a6"
           },
-          {label: "<10",
-            colors: "#0cbb2c"
+          {label: "50-99",
+            colors: "#f7d869"
           },
-          {label: "<10",
-            colors: "#0cbb2c"
+          {label: "100-199",
+            colors: "#6eb329"
+          },
+          {label: "200-500",
+            colors: "#ec6af6"
+          },
+          {label: ">500",
+            colors: "#0984dc"
           }
       
         ]

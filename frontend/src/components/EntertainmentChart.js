@@ -19,8 +19,6 @@ export default class EntertainmentChart extends React.Component {
         var lga = ["","","","",""]
         this.setState({option: this.initialOption(eva,temp, pre)})
         this.fetchOption();
-        
-        
     }
 
     
@@ -76,11 +74,15 @@ export default class EntertainmentChart extends React.Component {
             },
             xAxis: [
             {
+                axisLabel:{
+                    show: true,
+                    rotate: 40,
+                },
                 type: 'category',
                 axisTick: {
                 alignWithLabel: true
                 },
-                // prettier-ignore
+                inverse: true,
                 data: lga
             }
             ],
@@ -118,7 +120,7 @@ export default class EntertainmentChart extends React.Component {
             },
             {
                 type: 'value',
-                name: 'seat',
+                name: 'Seat',
                 position: 'left',
                 alignTicks: true,
                 axisLine: {
@@ -145,7 +147,7 @@ export default class EntertainmentChart extends React.Component {
                 data: negative_tweets
             },
             {
-                name: 'Capacity',
+                name: 'Seat',
                 type: 'line',
                 yAxisIndex: 2,
                 data: capacity
