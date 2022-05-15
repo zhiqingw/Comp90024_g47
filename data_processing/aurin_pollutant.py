@@ -20,9 +20,7 @@ def process_pollutant(data):
     marklist = sorted(output.items(), key=lambda x:x[1], reverse = True)
     sortdict = dict(marklist)
     
-    output_json = json.dumps(sortdict, indent = 4)
-    
-    return output_json
+    return sortdict
 
 pollutant = process_pollutant('pollutant.csv')
     
