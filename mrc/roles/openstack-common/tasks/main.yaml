@@ -18,6 +18,6 @@
 
 - name: install packages
   pip:
-    name: ['tweepy','couchdb','docker']
+    name: ['tweepy','couchdb','docker','requests']
     state: latest
 

@@ -6,7 +6,7 @@ from tweepy import StreamingClient, StreamRule, Tweet
 
 import variables
 import sys
-
+import requests
 
 
 
@@ -14,18 +14,23 @@ import sys
 class TweetListener(StreamingClient):
 
     def on_tweet(self, tweet):
-        db = couch['stream_tweets']
+        db = couch['search_and_stream_tweets']
         useless_db = couch['useless_stream_tweets']
 
         id = tweet.data['id']
         text = tweet.data['text']
         data = {"id": id, "text": text}
         if 'geo' in tweet.data.keys() and 'coordinates' in tweet.data['geo'].keys():
-            geo = tweet.data['geo']
-            data = {"id": id, "geo": geo, "text": text}
-            comb = json.dumps(data)
-            db_line = json.loads(comb)
-            db.save(db_line)
+            res = requests.get(url=('http://admin:admin@172.26.134.66:5984/search_and_stream_tweets/' + str(id)))
+            # remove duplicates
+            if res.ok:
+                pass
+            else:
+                geo = tweet.data['geo']
+                data = {"_id": id, "id": id, "geo": geo, "text": text}
+                comb = json.dumps(data)
+                db_line = json.loads(comb)
+                db.save(db_line)
         else:
             comb = json.dumps(data)
             db_line = json.loads(comb)

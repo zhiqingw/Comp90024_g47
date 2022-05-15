@@ -1,10 +1,11 @@
 import tweepy
-import json 
+import json
 import couchdb
+import requests
 
 
 def crawler_search(couch):
-    db = couch['search_tweets']
+    db = couch['search_and_stream_tweets']
     useless_db = couch['useless_search_tweets']
     # initiate clinet
     client = tweepy.Client(bearer_token=bearer_token)
@@ -15,18 +16,22 @@ def crawler_search(couch):
     for i in tweets.data:
         id = i.data['id']
         text = i.data['text']
-        data = {"id": id, "text": text}
+        data = {"_id": id, "id": id, "text": text}
         if 'geo' in i.data.keys():
-            geo = i.data['geo']
-            data = {"id": id, "geo": geo, "text": text}
-            comb = json.dumps(data)
-            db_line = json.loads(comb)
-            db.save(db_line)
+            res = requests.get(url=('http://admin:admin@172.26.134.66:5984/search_and_stream_tweets/' + str(id)))
+            # remove duplicates
+            if res.ok:
+                pass
+            else:
+                geo = i.data['geo']
+                data = {"_id": id, "id": id, "geo": geo, "text": text}
+                comb = json.dumps(data)
+                db_line = json.loads(comb)
+                db.save(db_line)
         else:
             comb = json.dumps(data)
             db_line = json.loads(comb)
             useless_db.save(db_line)
-
 
 
 if __name__ == "__main__":
@@ -45,6 +50,5 @@ if __name__ == "__main__":
     # initiate database access
     couch = couchdb.Server('http://admin:admin@172.26.134.66:5984/')
 
-    while(True):
+    while (True):
         crawler_search(couch)
-
