@@ -124,7 +124,7 @@ export default class PollutantGraph extends React.Component {
                 type: 'value',
                 name: 'Pollutant',
                 position: 'left',
-                alignTicks: true,
+                // alignTicks: true,
                 axisLine: {
                 show: true,
                 lineStyle: {
@@ -133,7 +133,8 @@ export default class PollutantGraph extends React.Component {
                 },
                 axisLabel: {
                 formatter: '{value}'
-                }
+                },
+                
             }
             ],
             series: [

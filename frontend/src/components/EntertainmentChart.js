@@ -122,7 +122,7 @@ export default class EntertainmentChart extends React.Component {
                 type: 'value',
                 name: 'Seat',
                 position: 'left',
-                alignTicks: true,
+                // alignTicks: true,
                 axisLine: {
                 show: true,
                 lineStyle: {
@@ -131,7 +131,9 @@ export default class EntertainmentChart extends React.Component {
                 },
                 axisLabel: {
                 formatter: '{value}'
-                }
+                },
+                
+
             }
             ],
             series: [

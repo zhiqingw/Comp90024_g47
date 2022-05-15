@@ -124,7 +124,7 @@ export default class HospitalChart extends React.Component {
                 type: 'value',
                 name: 'capacity',
                 position: 'left',
-                alignTicks: true,
+                // alignTicks: true,
                 axisLine: {
                 show: true,
                 lineStyle: {
