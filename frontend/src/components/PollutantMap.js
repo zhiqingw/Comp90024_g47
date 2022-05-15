@@ -80,7 +80,7 @@ export default class HospotalMap extends React.Component {
         , 500);
     }} 
     >
-    {this.state.showPopup && (
+    {/* {this.state.showPopup && (
       <Popup longitude={this.state.longitude} latitude={this.state.latitude}
         anchor="bottom"
         onClose={() =>this.setState({showPopup:false}) }
@@ -88,7 +88,7 @@ export default class HospotalMap extends React.Component {
         <h1>{this.state.features}</h1>
       </Popup>)
       
-      }
+      } */}
     </Map>
   
   </div>;

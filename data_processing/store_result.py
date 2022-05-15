@@ -32,7 +32,7 @@ db.save(positve_lga)
 # save most negative lga
 negative_lga = db['c414f40fbf9a3fa3d034c86b59dd6583']
 negative_lga['lga'] = max_negative_lga['lga']
-negative_lga['percentage'] = str(max_negative_lga['negative_percentage']*100) + "%"
+negative_lga['percentage'] = str(int(max_negative_lga['negative_percentage']*100)) + "%"
 negative_lga['data'][0]['value'] = max_negative_lga['positive']
 negative_lga['data'][1]['value'] = max_negative_lga['negative']
 db.save(negative_lga)

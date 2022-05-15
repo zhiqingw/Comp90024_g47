@@ -62,7 +62,7 @@ export default class HospitalMap extends React.Component {
     initialViewState={{
       longitude: 144.9631,
       latitude: -37.814107,
-      zoom: 8
+      zoom: 12
     }}
     style={{width: 800, height: 500}}
     mapStyle={this.props.mapStyle}
@@ -81,7 +81,7 @@ export default class HospitalMap extends React.Component {
         , 500);
     }} 
     >
-    {this.state.showPopup && (
+    {/* {this.state.showPopup && (
       <Popup longitude={this.state.longitude} latitude={this.state.latitude}
         anchor="bottom"
         onClose={() =>this.setState({showPopup:false}) }
@@ -89,7 +89,7 @@ export default class HospitalMap extends React.Component {
         <h1>{this.state.features.rd_seg_dsc}</h1>
       </Popup>)
       
-      }
+      } */}
     </Map>
   
   </div>;
