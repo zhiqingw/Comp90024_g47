@@ -1,5 +1,8 @@
 ---
-# Create volumes from vars
+# Author:      Xuxu Xu
+# Student id:  956895
+# Description: Create volumes from vars
+
 - name: Create volume(s) on NeCTAR
   openstack.cloud.volume:
     display_name: '{{ item.vol_name }}'

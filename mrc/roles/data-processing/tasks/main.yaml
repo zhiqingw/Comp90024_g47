@@ -1,5 +1,7 @@
 ---
-
+# Author:      Xuxu Xu
+# Student id:  956895
+# Description: deploy data processing program to remote instance
 - name: send data processing setup to backend server
   copy:
     src: ../../../../data_processing

@@ -1,4 +1,7 @@
 ---
+# Author:      Xuxu Xu
+# Student id:  956895
+# Description: deploy crawler program to remote instance
 
 - name: send crawler setup to crawler server
   copy:

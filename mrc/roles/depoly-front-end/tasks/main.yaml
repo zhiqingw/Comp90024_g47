@@ -1,4 +1,7 @@
 ---
+# Author:      Xuxu Xu
+# Student id:  956895
+# Description: deploy front end to remote instance
 
 - name: send frontend setup to frontend server
   copy:

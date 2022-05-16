@@ -1,35 +1,23 @@
-#- hosts: localhost
-#  vars_files:
-#    - host_vars/nectar.yaml
-#  gather_facts: true
-#
-#  roles:
-#    - role: openstack-images
-#    - role: openstack-volume
-#    - role: openstack-security-group
-#    - role: openstack-instance
-#    - role: instance-allocation
-#
+# Author:      Xuxu Xu
+# Student id:  956895
+# Description: Main yaml file, it will allocate resource, create instance, set up development environment, deploy
+# program to remote instances.
 
 - hosts: localhost
+  vars_files:
+    - host_vars/nectar.yaml
+  gather_facts: true
+
   roles:
-    - role: add-host
+    - role: openstack-common
+    - role: openstack-volume
+    - role: openstack-security-group
+    - role: openstack-instance
+    - role: instance-allocation
 
-#- hosts: database
-#  gather_facts: false
-#  become: true
-#  vars_files:
-#    - host_vars/nectar.yaml
-#  vars:
-#    - ansible_user: ubuntu
-#    - ansible_ssh_private_key_file: ~/.ssh/xuxux.pem
-#    - ansible_ssh_common_args: '-o StrictHostKeyChecking=no'
-#  roles:
-#    - role: openstack-common
-#    - role: depoly-couchdb
 
-- hosts: frontend
-  gather_facts: false
+- hosts: database
+  gather_facts: true
   become: true
   vars_files:
     - host_vars/nectar.yaml
@@ -38,34 +26,46 @@
     - ansible_ssh_private_key_file: ~/.ssh/xuxux.pem
     - ansible_ssh_common_args: '-o StrictHostKeyChecking=no'
   roles:
-#    - role: openstack-common
-#    - role: depoly-front-end
-    - role: upload-rm
+    - role: openstack-common
+    - role: depoly-couchdb
 
-#- hosts: crawler
-#  gather_facts: false
-#  become: true
-#  vars_files:
-#    - host_vars/nectar.yaml
-#  vars:
-#    - ansible_user: ubuntu
-#    - ansible_ssh_private_key_file: ~/.ssh/xuxux.pem
-#    - ansible_ssh_common_args: '-o StrictHostKeyChecking=no'
-#  roles:
-#    #- role: openstack-common
-#    - role: depoly-crawler
+- hosts: frontend
+  gather_facts: true
+  become: true
+  vars_files:
+    - host_vars/nectar.yaml
+  vars:
+    - ansible_user: ubuntu
+    - ansible_ssh_private_key_file: ~/.ssh/xuxux.pem
+    - ansible_ssh_common_args: '-o StrictHostKeyChecking=no'
+  roles:
+    - role: openstack-common
+    - role: depoly-front-end
 
-#- hosts: backend
-#  gather_facts: false
-#  become: true
-#  vars_files:
-#    - host_vars/nectar.yaml
-#  vars:
-#    - ansible_user: ubuntu
-#    - ansible_ssh_private_key_file: ~/.ssh/xuxux.pem
-#    - ansible_ssh_common_args: '-o StrictHostKeyChecking=no'
-#  roles:
-#    - role: openstack-common
-#    - role: data-processing
+- hosts: crawler
+  gather_facts: true
+  become: true
+  vars_files:
+    - host_vars/nectar.yaml
+  vars:
+    - ansible_user: ubuntu
+    - ansible_ssh_private_key_file: ~/.ssh/xuxux.pem
+    - ansible_ssh_common_args: '-o StrictHostKeyChecking=no'
+  roles:
+    - role: openstack-common
+    - role: depoly-crawler
+
+- hosts: backend
+  gather_facts: true
+  become: true
+  vars_files:
+    - host_vars/nectar.yaml
+  vars:
+    - ansible_user: ubuntu
+    - ansible_ssh_private_key_file: ~/.ssh/xuxux.pem
+    - ansible_ssh_common_args: '-o StrictHostKeyChecking=no'
+  roles:
+    - role: openstack-common
+    - role: data-processing
 
 

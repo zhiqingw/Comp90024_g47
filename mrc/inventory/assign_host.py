@@ -2,6 +2,10 @@ import argparse
 import sys
 from configparser import ConfigParser
 
+# Author:      Xuxu Xu
+# Student id:  956895
+# Description: Dynamically assign roles to different instances
+
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument('-n', help="n stands for number of instances")

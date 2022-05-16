@@ -1,4 +1,8 @@
 ---
+# Author:      Xuxu Xu
+# Student id:  956895
+# Description: setup and deploy couchdb database
+
 
 - name: set master_node variable
   set_fact:

@@ -1,5 +1,9 @@
 ---
-# Create an instance on NecTAR
+# Author:      Xuxu Xu
+# Student id:  956895
+# Description: Create an instance on NecTAR
+
+
 - name: Create an instance
   openstack.cloud.server:
     name: '{{ item.name }}'

@@ -1,5 +1,8 @@
 ---
-# Create a security group
+# Author:      Xuxu Xu
+# Student id:  956895
+# Description: Create a security group
+
 - name: Create a security group
   openstack.cloud.security_group:
     name: '{{ item.name }}'
