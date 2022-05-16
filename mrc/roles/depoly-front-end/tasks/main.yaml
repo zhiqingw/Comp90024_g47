@@ -2,12 +2,13 @@
 
 - name: send frontend setup to frontend server
   copy:
-    src: frontend
+    src: ../../../../frontend
     dest: /home/ubuntu
 
 - name: setup frontend
   shell:  |
     cd frontend
+    sudo rm -rf node_modules
     sudo npm install
     sudo npm install kill-port-process -g
     sudo npm install forever -g
@@ -15,5 +16,6 @@
 - name: start frontend
   shell:  |
     cd frontend
-    forever start node_modules/react-scripts/scripts/start.js
+    sudo forever stopall 
+    sudo forever start node_modules/react-scripts/scripts/start.js
 

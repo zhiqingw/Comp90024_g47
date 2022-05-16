@@ -2,7 +2,7 @@
 
 - name: send crawler setup to crawler server
   copy:
-    src: crawler
+    src: ../../../../crawler
     dest: /home/ubuntu
 
 

@@ -1,19 +1,5 @@
 ---
-#
-#- name: send docker setup to database server
-#  copy:
-#    src: docker-compose.yml
-#    dest: /home/ubuntu
-#
-#- name: send couchdb setup to database server
-#  copy:
-#    src: run.sh
-#    dest: /home/ubuntu
-#
-#- name: setup couchdb
-#  command: sh run.sh
-#
-#
+
 - name: set master_node variable
   set_fact:
     master_host: "http://{{user}}:{{pass}}@{{master_node}}:{{port}}"
@@ -52,8 +38,6 @@
   docker_container:
     name: "couch_slave1"
     image: couchdb:latest
-#    ports:
-#      - "15984:5984"
     volumes:
       - ./data/slave1/data:/opt/couchdb/data
     env:
@@ -70,8 +54,6 @@
   docker_container:
     name: "couch_slave2"
     image: couchdb:latest
-#    ports:
-#      - "25984:5984"
     volumes:
       - ./data/slave2/data:/opt/couchdb/data
     env:

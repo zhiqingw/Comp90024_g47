@@ -1,21 +1,21 @@
-- name: Add host
+- name: Add backend host
   ansible.builtin.add_host:
-    name: '172.26.130.233'
+    name: "{{ lookup('ini', 'backend',section='backend', file='./inventory/_inventory.ini',allow_no_value=True) }}"
     groups: backend
 
-- name: Add host
+- name: Add crawler host
   ansible.builtin.add_host:
-    name: '172.26.133.101'
+    name: "{{ lookup('ini', 'crawler',section='crawler', file='./inventory/_inventory.ini',allow_no_value=True) }}"
     groups: crawler
 
-- name: Add host
+- name: Add frontend host
   ansible.builtin.add_host:
-    name: '172.26.130.158'
+    name: "{{ lookup('ini', 'frontend',section='frontend', file='./inventory/_inventory.ini',allow_no_value=True) }}"
     groups: frontend
 
-- name: Add host
+- name: Add database host
   ansible.builtin.add_host:
-    name: '172.26.134.66'
+    name: "{{ lookup('ini', 'database',section='database', file='./inventory/_inventory.ini',allow_no_value=True) }}"
     groups: database
 
 

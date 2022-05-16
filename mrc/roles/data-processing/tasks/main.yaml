@@ -1,0 +1,14 @@
+---
+
+- name: send data processing setup to backend server
+  copy:
+    src: ../../../../data_processing
+    dest: /home/ubuntu
+
+
+- name: start backend server
+  shell:  |
+    cd data_processing
+    sudo chmod +x run.sh
+    nohup ./run.sh &
+  
