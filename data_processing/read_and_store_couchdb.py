@@ -5,14 +5,14 @@ from textblob import TextBlob
 import requests
 
 couch = couchdb.Server('http://admin:admin@172.26.134.66:5984/')
-db = couch['twitter']
+db = couch['search_and_stream_tweets']
 
-new_db = couch['process_melb_tweet']
-
-
+new_db = couch['search_and_stream_tweets']
 
 
-res = requests.get(url='http://admin:admin@172.26.134.66:5984/twitter/_all_docs')
+
+
+res = requests.get(url='http://admin:admin@172.26.134.66:5984/search_and_stream_tweets/_all_docs')
 all_id = res.json()['rows']
 print(all_id)
 for id in all_id:
