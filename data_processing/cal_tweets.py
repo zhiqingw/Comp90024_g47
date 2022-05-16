@@ -1,8 +1,9 @@
+# Author:      Zhiqing Wu
+# Student id:  931919
+# Description: sentiment map processing
+
 import requests
-
-
-# print(mel_tweets)
-# print(stream_and_search)
+# get the maximum positive lga
 def get_max_positve(sum_map):
     max_positive_lga = {}
     lga_list = list(sum_map.keys())
@@ -22,6 +23,7 @@ def get_max_positve(sum_map):
             max_positive_lga['neutral'] = sum_map[i]['neutral']
     return max_positive_lga
 
+# get the maximum negative lga
 def get_max_negative(sum_map):
     max_negative_lga = {}
     lga_list = list(sum_map.keys())
@@ -42,7 +44,7 @@ def get_max_negative(sum_map):
     return max_negative_lga
 
 
-
+# process the sentiment map
 def get_sum_map(mel_tweets):
     sum_map = {}
 

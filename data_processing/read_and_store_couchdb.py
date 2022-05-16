@@ -1,5 +1,8 @@
+# Author:      Zhiqing Wu
+# Student id:  931919
+# Description: process and store the twitter data without replication
+
 import couchdb
-from sentiment import data_processing
 from convert_geo import geo_convertor
 from textblob import TextBlob
 import requests
@@ -17,10 +20,6 @@ all_id = res.json()['rows']
 print(all_id)
 for id in all_id:
     curr = db[id['id']]
-    # skip the data already assign sentiment and lga
-    # if(("sentiment" in curr) & ("lga" in curr)):
-    #     print("exist: " + id['id'])
-    #     continue
     
     text = ""
     coordinate_format = ""

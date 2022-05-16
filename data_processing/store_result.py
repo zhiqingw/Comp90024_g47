@@ -1,3 +1,7 @@
+# Author:      Zhiqing Wu
+# Student id:  931919
+# Description: store final result into couchdb
+
 from email.base64mime import header_length
 import json
 import couchdb

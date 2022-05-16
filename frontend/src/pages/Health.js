@@ -1,3 +1,7 @@
+// Author:      Zhiqing Wu
+// Student id:  931919
+// Description: Health page
+
 import React from "react";
 import ReactEcharts from "echarts-for-react"; 
 import HospitalMap from "../components/HospitalMap";

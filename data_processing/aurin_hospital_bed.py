@@ -1,3 +1,9 @@
+# Author:      Leqi Wang
+# Student id:  1126066
+# Description: preprocess hospital capacity data
+
+
+
 import pandas as pd
 import numpy as np
 import json

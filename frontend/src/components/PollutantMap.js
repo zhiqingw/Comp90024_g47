@@ -1,3 +1,7 @@
+// Author:      Zhiqing Wu
+// Student id:  931919
+// Description: Chart for visualising the Pollutant map
+
 import * as React from 'react';
 import Map, {Popup} from 'react-map-gl';
 import 'mapbox-gl/dist/mapbox-gl.css';
