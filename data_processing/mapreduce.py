@@ -1,11 +1,13 @@
+# Author:      Zhiqing Wu
+# Student id:  931919
+# Description: performing map reduce and stored the sentiment map to database
+
 import requests
 import couchdb
-# from textblob import TextBlob
 couch = couchdb.Server('http://admin:admin@172.26.134.66:5984/')
-# db = couch.create('sentiment_map')
+
 db = couch['sentiment_map']
-# 'http://admin:admin@172.26.134.66:5984/twenty_gig_tweets/_design/count_tweets_sentiment/_view/lga?group=true'
-# http://admin:admin@172.26.134.66:5984/student/_design/info/_view/count?group=true
+
 db_name = "process_melb_tweet"
 uname_list = requests.get('http://admin:admin@172.26.134.66:5984/' + db_name + '/_design/count_tweets_sentiment/_view/lga?group=true')
 all_lga_and_sentiment = uname_list.json()["rows"]

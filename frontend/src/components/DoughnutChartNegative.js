@@ -1,3 +1,7 @@
+// Author:      Zhiqing Wu
+// Student id:  931919
+// Description: DoughnutChart for the most negative lga
+
 import React from "react";
 import ReactEcharts from "echarts-for-react"; 
 

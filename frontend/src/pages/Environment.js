@@ -1,3 +1,7 @@
+// Author:      Zhiqing Wu
+// Student id:  931919
+// Description: Environment page
+
 import React from "react";
 import ReactEcharts from "echarts-for-react"; 
 import PollutantMap from "../components/PollutantMap";

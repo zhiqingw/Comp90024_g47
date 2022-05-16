@@ -1,3 +1,7 @@
+// Author:      Zhiqing Wu
+// Student id:  931919
+// Description: Front End main program
+
 import logo from './logo.svg';
 import './App.css';
 import React from "react";

@@ -1,3 +1,7 @@
+# Author:      Zhiqing Wu
+# Student id:  931919
+# Description: convert coordinate to suburb
+
 from geopy import Nominatim
 
 def geo_convertor(coordinate):

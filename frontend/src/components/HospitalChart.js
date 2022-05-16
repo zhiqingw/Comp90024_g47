@@ -1,3 +1,7 @@
+// Author:      Zhiqing Wu
+// Student id:  931919
+// Description: Chart for visualising the hospital data
+
 import React from "react";
 import ReactEcharts from "echarts-for-react"; 
 

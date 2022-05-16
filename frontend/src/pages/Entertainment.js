@@ -1,3 +1,7 @@
+// Author:      Zhiqing Wu
+// Student id:  931919
+// Description: Entertainment page
+
 import React from "react";
 import ReactEcharts from "echarts-for-react"; 
 import PollutantGraph from "../components/PollutantGraph";
