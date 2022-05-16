@@ -2,7 +2,7 @@ import argparse
 import sys
 from configparser import ConfigParser
 
-# Author:      Xuxu Xu
+# Author:      Xuxu Xue
 # Student id:  956895
 # Description: Dynamically assign roles to different instances
 

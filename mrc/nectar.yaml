@@ -1,4 +1,4 @@
-# Author:      Xuxu Xu
+# Author:      Xuxu Xue
 # Student id:  956895
 # Description: Main yaml file, it will allocate resource, create instance, set up development environment, deploy
 # program to remote instances.
