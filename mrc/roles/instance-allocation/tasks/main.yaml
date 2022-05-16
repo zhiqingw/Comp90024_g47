@@ -3,7 +3,7 @@
 - name: instance allocation
   shell: |
     cd ./inventory
-    python3 assign_host.py
+    python3 assign_host.py -n 4 -c 1 -d 1 -f 1 -b 1
 
 - name: set host variable
   set_fact:
